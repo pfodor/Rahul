@@ -138,14 +138,73 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden)
         samples+=extraSamples
         return samples
 
+############################# WRITE TEST DATA ###############################
+
+
+def writeTest1data(sp,alphabet):
+    tSP = "./test/test1_"+sp+".txt"
+    f=open(tSP, "w")
+    f.seek(0)
+    trainingPos=[]
+    trainingNeg=[]
+
+    if sl == "SP2":
+        trainingPos = generateSPTest1(alphabet,trainingPosSP2, 20, 'POS', checkForbiddenSP2)
+        trainingNeg = generateSPTest1(alphabet,trainingNegSP2, 20, 'NEG', checkForbiddenSP2)
+    elif sl =="SP4":
+        trainingPos = generateSPTest1(alphabet,trainingPosSP4, 200, 'POS', checkForbiddenSP4)
+        trainingNeg = generateSPTest1(alphabet,trainingNegSP4, 200, 'NEG', checkForbiddenSP4)
+    else:
+        trainingPos = generateSPTest1(alphabet,trainingPosSP8, 2000, 'POS', checkForbiddenSP8)
+        trainingNeg = generateSPTest1(alphabet,trainingNegSP8, 2000, 'NEG', checkForbiddenSP8)
+
+    for x in trainingPos:
+        f.write(x)
+        f.write('\n')
+    for x in trainingNeg:
+        f.write(x)
+        f.write('\n')
+
+    f.close()
+    return (trainingPos, trainingNeg)
+
+
+def writeTest2data(sl,alphabet):
+    tSP = "./test/test2_"+sl+".txt"
+    f=open(tSP, "w")
+    f.seek(0)
+    trainingPos=[]
+    trainingNeg=[]
+
+    if sl == "SP2":
+        trainingPos = generateSPPositive(alphabet, 20, checkForbiddenSP2, 26, 50)
+        trainingNeg = generateSPNegative(alphabet, 26, 50, 20, checkForbiddenSP2)
+    elif sl =="SP4":
+        trainingPos = generateSPPositive(alphabet, 200, checkForbiddenSP4, 26, 50)
+        trainingNeg = generateSPNegative(alphabet, 26, 50, 200, checkForbiddenSP4)
+    else:
+        trainingPos = generateSPPositive(alphabet, 2000, checkForbiddenSP8, 26, 50)
+        trainingNeg = generateSPNegative(alphabet, 26, 50, 2000, checkForbiddenSP8)
+
+    for x in trainingPos:
+        f.write(x)
+        f.write('\n')
+    for x in trainingNeg:
+        f.write(x)
+        f.write('\n')
+
+    f.close()
+    return (trainingPos, trainingNeg)
+
+
 ##############################################################################
 ##############################################################################
 if __name__ == "__main__":
     alphabet=sys.argv[1]
 
-##########################################################################
-#########################CREATE TRAINING SETS#############################
-##########################################################################
+############################################################################
+######################### CREATE TRAINING SETS #############################
+############################################################################
 
 tset = writeTrainingData("SP2", alphabet)
 trainingPosSP2 = tset[0]
@@ -160,26 +219,34 @@ trainingPosSP8 = tset[0]
 trainingNegSP8 = tset[1]
 
 
-##########################################################################
-#########################CREATE TEST SETS#################################
-##########################################################################
+############################################################################
+######################### CREATE TEST SETS #################################
+############################################################################
 
 #########################   TEST 1  ######################################
 
-test1PosSP2 = generateSPTest1(alphabet,trainingPosSP2, 20, 'POS', checkForbiddenSP2)
-test1PosSP4 = generateSPTest1(alphabet,trainingPosSP4, 200, 'POS', checkForbiddenSP4)
-test1PosSP8 = generateSPTest1(alphabet,trainingPosSP8, 2000, 'POS', checkForbiddenSP8)
+test1setSP2 = writeTest1data("SP2",alphabet)
+test1PosSP2 = test1setSP2[0]
+test1NegSP2 = test1setSP2[1]
 
-test1NegSP2 = generateSPTest1(alphabet,trainingNegSP2, 20, 'NEG', checkForbiddenSP2)
-test1NegSP4 = generateSPTest1(alphabet,trainingNegSP4, 200, 'NEG', checkForbiddenSP4)
-test1NegSP8 = generateSPTest1(alphabet,trainingNegSP8, 2000, 'NEG', checkForbiddenSP8)
+test1setSP4 = writeTest1data("SP4",alphabet)
+test1PosSP4 = test1setSP4[0]
+test1NegSP4 = test1setSP4[1]
+
+test1setSP8 = writeTest1data("SP8",alphabet)
+test1PosSP8 = test1setSP8[0]
+test1NegSP8 = test1setSP8[1]
 
 #########################   TEST 2  ######################################
-test2PosSP2 = generateSPPositive(alphabet, 20, checkForbiddenSP2, 26, 50)
-test2NegSP2 = generateSPNegative(alphabet, 26, 50, 20, checkForbiddenSP2)
 
-test2PosSP4 = generateSPPositive(alphabet, 200, checkForbiddenSP4, 26, 50)
-test2NegSP4 = generateSPNegative(alphabet, 26, 50, 200, checkForbiddenSP4)
+test2setSP2 = writeTest2data("SP2", alphabet)
+test2PosSP2 = test2setSP2[0]
+test2NegSP2 = test2setSP2[1]
 
-test2PosSP8 = generateSPPositive(alphabet, 2000, checkForbiddenSP8, 26, 50)
-test2NegSP8 = generateSPNegative(alphabet, 26, 50, 2000, checkForbiddenSP8)
+test2setSP4 = writeTest2data("SP4", alphabet)
+test2PosSP4 = test2setSP4[0]
+test2NegSP4 = test2setSP4[1]
+
+test2setSP8 = writeTest2data("SP8", alphabet)
+test2PosSP8 = test2setSP4[0]
+test2NegSP8 = test2setSP4[1]

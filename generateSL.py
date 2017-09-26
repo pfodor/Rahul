@@ -232,9 +232,9 @@ tset = writeTrainingData("SL4", alphabet)
 trainingPosSL4 = tset[0]
 trainingNegSL4 = tset[1]
 
-#tset = writeTrainingData("SL8", alphabet)
-#trainingPosSL8 = tset[0]
-#trainingNegSL8 = tset[1]
+tset = writeTrainingData("SL8", alphabet)
+trainingPosSL8 = tset[0]
+trainingNegSL8 = tset[1]
 
 ##########################################################################
 ######################### CREATE TEST SETS #################################
