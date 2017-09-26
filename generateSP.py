@@ -1,5 +1,14 @@
 import rstr
 import re
+from itertools import product
+
+
+def forbiddenChecker(word, posORneg, checkForbidden):
+    if posORneg == "POS":
+        return checkForbidden(word)
+    if posORneg == "NEG":
+        return not checkForbidden(word)
+
 
 #This Function checks if a word is forbidden in SP2
 
@@ -26,54 +35,19 @@ def checkForbiddenSP8(word):
     return False
 
 # GENERATE SP2 FOR APLHABET = {a,b,c}
-
-
-def generateSP2Positive(alphabet):
+def generateSPPositive(alphabet, sampleAmount, checkForbidden, minWordLength, maxWordLength):
     # GENERATE POSITIVE SAMPLES
     posSamples = []
     samplePerLength = []
-    x = 1
-    while x < 26:
+    x = minWordLength
+    while x < maxWordLength+1:
         word = rstr.rstr(alphabet, x)
         # check if word is forbidden
-        forbidden = checkForbiddenSP2(word)
+        forbidden = checkForbidden(word)
         if not forbidden:
             samplePerLength.append(word)
-        if len(samplePerLength) == 20:
-            x += 1
-            posSamples+=samplePerLength
-            samplePerLength = []
-    return posSamples
-
-def generateSP4Positive(alphabet):
-    # GENERATE POSITIVE SAMPLES
-    posSamples = []
-    samplePerLength = []
-    x = 1
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
-        # check if word is forbidden
-        forbidden = checkForbiddenSP4(word)
-        if not forbidden:
-            samplePerLength.append(word)
-        if len(samplePerLength) == 200:
-            x += 1
-            posSamples += samplePerLength
-            samplePerLength = []
-    return posSamples
-
-def generateSP8Positive(alphabet):
-    # GENERATE POSITIVE SAMPLES
-    posSamples = []
-    samplePerLength = []
-    x = 1
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
-        # check if word is forbidden
-        forbidden = checkForbiddenSP8(word)
-        if not forbidden:
-            samplePerLength.append(word)
-        if len(samplePerLength) == 2000:
+            print(word,x)
+        if len(samplePerLength) == sampleAmount:
             x += 1
             posSamples+=samplePerLength
             samplePerLength = []
@@ -83,103 +57,125 @@ def generateSP8Positive(alphabet):
 ########################NEGATIVE SAMPLES##################################
 ##########################################################################
 
-def generateSP2Negative(alphabet):
+def generateSPNegative(alphabet, minWordLength, maxWordLength, sampleAmount, checkForbidden):
     # GENERATE POSITIVE SAMPLES
     negSamples = []
     samplePerLength = []
-
-    while len(samplePerLength)<(20*2):
-        word = rstr.rstr(alphabet,2)
+    while len(samplePerLength)<(20*minWordLength):
+        word = rstr.rstr(alphabet,minWordLength)
         # check if word is forbidden
-        forbidden = checkForbiddenSP2(word)
+        forbidden = checkForbidden(word)
         if forbidden:
-            print(word)
             samplePerLength.append(word)
-    x = 3
+    x = minWordLength+1
     negSamples+=samplePerLength
     samplePerLength = []
-    while x < 26:
+    while x < maxWordLength+1:
         word = rstr.rstr(alphabet, x)
         # check if word is forbidden
-        forbidden = checkForbiddenSP2(word)
+        forbidden = checkForbidden(word)
         if forbidden:
             samplePerLength.append(word)
-            print(word , x, len(samplePerLength))
-        if len(samplePerLength) == 20:
+        if len(samplePerLength) == sampleAmount:
             x += 1
             negSamples+=samplePerLength
             samplePerLength = []
     return negSamples
 
-def generateSP4Negative(alphabet):
-    # GENERATE POSITIVE SAMPLES
-    negSamples = []
-    samplePerLength = []
+def writeTrainingData(sp, alphabet):
+    tSP = "./training/T_"+sp+".txt"
+    f=open(tSP, "w")
+    f.seek(0)
+    trainingPos=[]
+    trainingNeg=[]
 
-    while len(samplePerLength)<(20*4):
-        word = rstr.rstr(alphabet,4)
-        # check if word is forbidden
-        forbidden = checkForbiddenSP4(word)
-        if forbidden:
-            samplePerLength.append(word)
-    x = 5
-    negSamples+=samplePerLength
-    samplePerLength = []
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
-        # check if word is forbidden
-        forbidden = checkForbiddenSP4(word)
-        if forbidden:
-            samplePerLength.append(word)
-        if len(samplePerLength) == 200:
-            x += 1
-            negSamples += samplePerLength
-            samplePerLength = []
-    return negSamples
+    if sp == "SP2":
+        trainingPos = generateSPPositive(alphabet, 20, checkForbiddenSP2, 1, 26)
+        trainingNeg = generateSPNegative(alphabet, 2, 26, 20, checkForbiddenSP2)
+    elif sp =="SP4":
+        trainingPos = generateSPPositive(alphabet, 200, checkForbiddenSP4, 1, 26)
+        trainingNeg = generateSPNegative(alphabet, 4, 26, 200, checkForbiddenSP4)
+    else:
+        trainingPos = generateSPPositive(alphabet, 2000, checkForbiddenSP8, 1, 26)
+        trainingNeg = generateSPNegative(alphabet, 8, 26, 2000, checkForbiddenSP8)
 
-def generateSP8Negative(alphabet):
-    # GENERATE POSITIVE SAMPLES
-    negSamples = []
-    samplePerLength = []
-    while len(samplePerLength)<(20*8):
-        word = rstr.rstr(alphabet,8)
-        # check if word is forbidden
-        forbidden = checkForbiddenSP8(word)
-        if forbidden:
-            samplePerLength.append(word)
-    x = 9
-    negSamples+=samplePerLength
-    samplePerLength = []
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
-        # check if word is forbidden
-        forbidden = checkForbiddenSP8(word)
-        if forbidden:
-            samplePerLength.append(word)
-        if len(samplePerLength) == 2000:
-            x += 1
-            negSamples+=samplePerLength
-            samplePerLength = []
-    return negSamples
+    for x in trainingPos:
+        f.write(x)
+        f.write('\n')
+    for x in trainingNeg:
+        f.write(x)
+        f.write('\n')
+    f.close()
+    return (trainingPos, trainingNeg)
+
+##########################################################################
+#########################CREATE TRAINING SETS#############################
+##########################################################################
+
+#tset = writeTrainingData("SP2", 'abc')
+#trainingPosSP2 = tset[0]
+#trainingNegSP2 = tset[1]
+
+#tset = writeTrainingData("SP4", 'abc')
+#trainingPosSP4 = tset[0]
+#trainingNegSP4 = tset[1]
+
+#tset = writeTrainingData("SP8", 'abc')
+#trainingPosSP8 = tset[0]
+#trainingNegSP8 = tset[1]
+
 
 ##########################################################################
 #########################CREATE TEST SETS#################################
-#########################################################################
+##########################################################################
 
-trainingPosSP2 = generateSP2Positive('abc')
-print("done1")
-trainingPosSP4 = generateSP4Positive('abc')
-print("done2")
-trainingPosSP8 = generateSP8Positive('abc')
-print("done3")
+#########################   TEST 1  ######################################
 
-trainingNegSP2 = generateSP2Negative('abc')
-print("done4")
-trainingNegSP4 = generateSP4Negative('abc')
-print("done5")
-trainingNegSP8 = generateSP8Negative('abc')
-print("done6")
+def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden):
+    samples=[]
+    for t in range(1,26):
+        allCombos = [''.join(x) for x in product(alphabet, repeat = t)]
+        for x in allCombos:
+            if len(x) == t:
+                if x not in trainingSP:
+                    if not forbiddenChecker(x, posORneg, checkForbidden):
+                        samplePerLength = []
+                        while len(samplePerLength)<sampleAmount:
+                            word = rstr.rstr(alphabet, t)
+                            # check if word is forbidden
+                            forbidden = forbiddenChecker(word, posORneg, checkForbidden)
+                            if not forbidden:
+                                if word not in trainingSP:
+                                    samplePerLength.append(word)
+                            samples+=samplePerLength
+        #add extra samples
+        extraSamples = []
+        while len(extraSamples) < sampleAmount*10:
+            word = rstr.rstr(alphabet, 25)
+            # check if word is forbidden
+            forbidden = forbiddenChecker(word, posORneg, checkForbidden)
+            if not forbidden:
+                if word not in trainingSP:
+                    extraSamples.append(word)
+        samples+=extraSamples
+        return samples
 
-print(len(trainingPosSP2))
-for x in trainingPosSP2:
-    print(x,len(x))
+test1PosSP2 = generateSPTest1('abc',trainingPosSP2, 20, 'POS', checkForbiddenSP2)
+test1PosSP4 = generateSPTest1('abc',trainingPosSP4, 200, 'POS', checkForbiddenSP4)
+test1PosSP8 = generateSPTest1('abc',trainingPosSP8, 2000, 'POS', checkForbiddenSP8)
+
+test1NegSP2 = generateSPTest1('abc',trainingNegSP2, 20, 'NEG', checkForbiddenSP2)
+test1NegSP4 = generateSPTest1('abc',trainingNegSP4, 200, 'NEG', checkForbiddenSP4)
+test1NegSP8 = generateSPTest1('abc',trainingNegSP8, 2000, 'NEG', checkForbiddenSP8)
+
+#########################   TEST 2  ######################################
+alphabet = 'abc'
+
+test2PosSP2 = generateSPPositive(alphabet, 20, checkForbiddenSP2, 26, 50)
+test2NegSP2 = generateSPNegative(alphabet, 26, 50, 20, checkForbiddenSP2)
+
+test2PosSP4 = generateSPPositive(alphabet, 200, checkForbiddenSP4, 26, 50)
+test2NegSP4 = generateSPNegative(alphabet, 26, 50, 200, checkForbiddenSP4)
+
+test2PosSP8 = generateSPPositive(alphabet, 2000, checkForbiddenSP8, 26, 50)
+test2NegSP8 = generateSPNegative(alphabet, 26, 50, 2000, checkForbiddenSP8)

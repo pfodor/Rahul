@@ -49,55 +49,20 @@ def checkForbiddenSL8(word):
         forbidden = True
     return forbidden
 
-# GENERATE SL2 FOR APLHABET = {a,b,c}
+# GENERATE SL2 POSITIVE
 
-
-def generateSL2Positive(alphabet):
+def generateSLPositive(alphabet, sampleAmount, checkForbidden, minWordLength, maxWordLength):
     # GENERATE POSITIVE SAMPLES
     posSamples = []
     samplePerLength = []
-    x = 1
-    while x < 26:
+    x = minWordLength
+    while x < maxWordLength+1:
         word = rstr.rstr(alphabet, x)
         # check if word is forbidden
-        forbidden = checkForbiddenSL2(word)
+        forbidden = checkForbidden(word)
         if not forbidden:
             samplePerLength.append(word)
-        if len(samplePerLength) == 20:
-            x += 1
-            posSamples+=samplePerLength
-            samplePerLength = []
-    return posSamples
-
-def generateSL4Positive(alphabet):
-    # GENERATE POSITIVE SAMPLES
-    posSamples = []
-    samplePerLength = []
-    x = 1
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
-        # check if word is forbidden
-        forbidden = checkForbiddenSL4(word)
-        if not forbidden:
-            samplePerLength.append(word)
-        if len(samplePerLength) == 200:
-            x += 1
-            posSamples += samplePerLength
-            samplePerLength = []
-    return posSamples
-
-def generateSL8Positive(alphabet):
-    # GENERATE POSITIVE SAMPLES
-    posSamples = []
-    samplePerLength = []
-    x = 1
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
-        # check if word is forbidden
-        forbidden = checkForbiddenSL8(word)
-        if not forbidden:
-            samplePerLength.append(word)
-        if len(samplePerLength) == 2000:
+        if len(samplePerLength) == sampleAmount:
             x += 1
             posSamples+=samplePerLength
             samplePerLength = []
@@ -107,73 +72,31 @@ def generateSL8Positive(alphabet):
 ########################NEGATIVE SAMPLES##################################
 ##########################################################################
 
-def generateSL2Negative(alphabet):
+def generateSLNegative(alphabet, minWordLength, maxWordLength, sampleAmount, checkForbidden):
     # GENERATE POSITIVE SAMPLES
     negSamples = []
     samplePerLength = []
-    x = 1
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
+    while len(samplePerLength)<(20*minWordLength):
+        word = rstr.rstr(alphabet,minWordLength)
         # check if word is forbidden
-        forbidden = checkForbiddenSL2(word)
+        forbidden = checkForbidden(word)
         if forbidden:
             samplePerLength.append(word)
-        if len(samplePerLength) == 20:
+    x = minWordLength+1
+    negSamples+=samplePerLength
+    samplePerLength = []
+    while x < maxWordLength+1:
+        word = rstr.rstr(alphabet, x)
+        # check if word is forbidden
+        forbidden = checkForbidden(word)
+        if forbidden:
+            samplePerLength.append(word)
+        if len(samplePerLength) == sampleAmount:
             x += 1
             negSamples+=samplePerLength
             samplePerLength = []
     return negSamples
 
-def generateSL4Negative(alphabet):
-    # GENERATE POSITIVE SAMPLES
-    negSamples = []
-    samplePerLength = []
-
-    while len(samplePerLength)<(20*4):
-        word = rstr.rstr(alphabet,4)
-        # check if word is forbidden
-        forbidden = checkForbiddenSL4(word)
-        if forbidden:
-            samplePerLength.append(word)
-    x = 5
-    negSamples+=samplePerLength
-    samplePerLength = []
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
-        # check if word is forbidden
-        forbidden = checkForbiddenSL4(word)
-        if forbidden:
-            samplePerLength.append(word)
-        if len(samplePerLength) == 200:
-            x += 1
-            negSamples += samplePerLength
-            samplePerLength = []
-    return negSamples
-
-def generateSL8Negative(alphabet):
-    # GENERATE POSITIVE SAMPLES
-    negSamples = []
-    samplePerLength = []
-    while len(samplePerLength)<(20*8):
-        word = rstr.rstr(alphabet,8)
-        # check if word is forbidden
-        forbidden = checkForbiddenSL8(word)
-        if forbidden:
-            samplePerLength.append(word)
-    x = 9
-    negSamples+=samplePerLength
-    samplePerLength = []
-    while x < 26:
-        word = rstr.rstr(alphabet, x)
-        # check if word is forbidden
-        forbidden = checkForbiddenSL8(word)
-        if forbidden:
-            samplePerLength.append(word)
-        if len(samplePerLength) == 2000:
-            x += 1
-            negSamples+=samplePerLength
-            samplePerLength = []
-    return negSamples
 
 def writeTrainingData(sl, alphabet):
     tSL = "./training/T_"+sl+".txt"
@@ -183,14 +106,14 @@ def writeTrainingData(sl, alphabet):
     trainingNeg=[]
 
     if sl == "SL2":
-        trainingPos = generateSL2Positive(alphabet)
-        trainingNeg = generateSL2Negative(alphabet)
+        trainingPos = generateSLPositive(alphabet, 20, checkForbiddenSL2, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 1, 26, 20, checkForbiddenSL2)
     elif sl =="SL4":
-        trainingPos = generateSL4Positive(alphabet)
-        trainingNeg = generateSL4Negative(alphabet)
+        trainingPos = generateSLPositive(alphabet, 200, checkForbiddenSL4, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 4, 26, 200, checkForbiddenSL4)
     else:
-        trainingPos = generateSL8Positive(alphabet)
-        trainingNeg = generateSL8Negative(alphabet)
+        trainingPos = generateSLPositive(alphabet, 2000, checkForbiddenSL8, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 8, 26, 2000, checkForbiddenSL8)
 
     for x in trainingPos:
         f.write(x)
@@ -209,9 +132,6 @@ tset = writeTrainingData("SL2", 'abc')
 trainingPosSL2 = tset[0]
 trainingNegSL2 = tset[1]
 
-print(trainingPosSL2)
-print("=============================================================")
-
 tset = writeTrainingData("SL4", 'abc')
 trainingPosSL4 = tset[0]
 trainingNegSL4 = tset[1]
@@ -225,12 +145,12 @@ trainingNegSL4 = tset[1]
 #########################CREATE TEST SETS#################################
 ##########################################################################
 
+#########################   TEST 1  ######################################
+
 def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden):
     samples=[]
     for t in range(1,26):
         allCombos = [''.join(x) for x in product(alphabet, repeat = t)]
-        print(samples)
-        print("#########################################################")
         for x in allCombos:
             if len(x) == t:
                 if x not in trainingSL:
@@ -258,8 +178,20 @@ def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden)
 
 test1PosSL2 = generateSLTest1('abc',trainingPosSL2, 20, 'POS', checkForbiddenSL2)
 test1PosSL4 = generateSLTest1('abc',trainingPosSL4, 200, 'POS', checkForbiddenSL4)
-test1PosSL8 = generateSLTest1('abc',trainingPosSL8, 2000, 'POS', checkForbiddenSL8)
+#test1PosSL8 = generateSLTest1('abc',trainingPosSL8, 2000, 'POS', checkForbiddenSL8)
 
 test1NegSL2 = generateSLTest1('abc',trainingNegSL2, 20, 'NEG', checkForbiddenSL2)
 test1NegSL4 = generateSLTest1('abc',trainingNegSL4, 200, 'NEG', checkForbiddenSL4)
-test1NegSL8 = generateSLTest1('abc',trainingNegSL8, 2000, 'NEG', checkForbiddenSL8)
+#test1NegSL8 = generateSLTest1('abc',trainingNegSL8, 2000, 'NEG', checkForbiddenSL8)
+
+#########################   TEST 2  ######################################
+alphabet = 'abc'
+
+test2PosSL2 = generateSLPositive(alphabet, 20, checkForbiddenSL2, 26, 50)
+test2NegSL2 = generateSLNegative(alphabet, 26, 50, 20, checkForbiddenSL2)
+
+test2PosSL4 = generateSLPositive(alphabet, 200, checkForbiddenSL4, 26, 50)
+test2NegSL4 = generateSLNegative(alphabet, 26, 50, 200, checkForbiddenSL4)
+
+test2PosSL8 = generateSLPositive(alphabet, 2000, checkForbiddenSL8, 26, 50)
+test2NegSL8 = generateSLNegative(alphabet, 26, 50, 2000, checkForbiddenSL8)
