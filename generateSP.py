@@ -80,6 +80,33 @@ def generateSPNegative(alphabet, minWordLength, maxWordLength, sampleAmount, che
             negSamples+=samplePerLength
             samplePerLength = []
     return negSamples
+########################### WRITE TRAINING DATA ###############################
+
+def writeTrainingData(sp, alphabet):
+    tSP = "./training/T_"+sp+".txt"
+    f=open(tSP, "w")
+    f.seek(0)
+    trainingPos=[]
+    trainingNeg=[]
+
+    if sp == "SP2":
+        trainingPos = generateSPPositive(alphabet, 20, checkForbiddenSP2, 1, 26)
+        trainingNeg = generateSPNegative(alphabet, 2, 26, 20, checkForbiddenSP2)
+    elif sp =="SP4":
+        trainingPos = generateSPPositive(alphabet, 200, checkForbiddenSP4, 1, 26)
+        trainingNeg = generateSPNegative(alphabet, 4, 26, 200, checkForbiddenSP4)
+    else:
+        trainingPos = generateSPPositive(alphabet, 2000, checkForbiddenSP8, 1, 26)
+        trainingNeg = generateSPNegative(alphabet, 8, 26, 2000, checkForbiddenSP8)
+
+    for x in trainingPos:
+        f.write(x)
+        f.write('\n')
+    for x in trainingNeg:
+        f.write(x)
+        f.write('\n')
+    f.close()
+    return (trainingPos, trainingNeg)
 
 ##########################GENERATE TEST 1######################################
 def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden):
@@ -110,32 +137,6 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden)
                     extraSamples.append(word)
         samples+=extraSamples
         return samples
-
-def writeTrainingData(sp, alphabet):
-    tSP = "./training/T_"+sp+".txt"
-    f=open(tSP, "w")
-    f.seek(0)
-    trainingPos=[]
-    trainingNeg=[]
-
-    if sp == "SP2":
-        trainingPos = generateSPPositive(alphabet, 20, checkForbiddenSP2, 1, 26)
-        trainingNeg = generateSPNegative(alphabet, 2, 26, 20, checkForbiddenSP2)
-    elif sp =="SP4":
-        trainingPos = generateSPPositive(alphabet, 200, checkForbiddenSP4, 1, 26)
-        trainingNeg = generateSPNegative(alphabet, 4, 26, 200, checkForbiddenSP4)
-    else:
-        trainingPos = generateSPPositive(alphabet, 2000, checkForbiddenSP8, 1, 26)
-        trainingNeg = generateSPNegative(alphabet, 8, 26, 2000, checkForbiddenSP8)
-
-    for x in trainingPos:
-        f.write(x)
-        f.write('\n')
-    for x in trainingNeg:
-        f.write(x)
-        f.write('\n')
-    f.close()
-    return (trainingPos, trainingNeg)
 
 ##############################################################################
 ##############################################################################

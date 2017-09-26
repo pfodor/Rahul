@@ -1,5 +1,6 @@
 import rstr
 from itertools import product
+import sys
 
 #This Function checks if a word is forbidden in SL2
 
@@ -69,7 +70,7 @@ def generateSLPositive(alphabet, sampleAmount, checkForbidden, minWordLength, ma
     return posSamples
 
 ##########################################################################
-########################NEGATIVE SAMPLES##################################
+######################## NEGATIVE SAMPLES ##################################
 ##########################################################################
 
 def generateSLNegative(alphabet, minWordLength, maxWordLength, sampleAmount, checkForbidden):
@@ -97,7 +98,36 @@ def generateSLNegative(alphabet, minWordLength, maxWordLength, sampleAmount, che
             samplePerLength = []
     return negSamples
 
-#################################GENERATE TEST 1########################
+############################## WRITE TRAINING DATA ##########################
+
+def writeTrainingData(sl, alphabet):
+    tSL = "./training/T_"+sl+".txt"
+    f=open(tSL, "w")
+    f.seek(0)
+    trainingPos=[]
+    trainingNeg=[]
+
+    if sl == "SL2":
+        trainingPos = generateSLPositive(alphabet, 20, checkForbiddenSL2, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 1, 26, 20, checkForbiddenSL2)
+    elif sl =="SL4":
+        trainingPos = generateSLPositive(alphabet, 200, checkForbiddenSL4, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 4, 26, 200, checkForbiddenSL4)
+    else:
+        trainingPos = generateSLPositive(alphabet, 2000, checkForbiddenSL8, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 8, 26, 2000, checkForbiddenSL8)
+
+    for x in trainingPos:
+        f.write(x)
+        f.write('\n')
+    for x in trainingNeg:
+        f.write(x)
+        f.write('\n')
+
+    f.close()
+    return (trainingPos, trainingNeg)
+
+################################# GENERATE TEST 1 ########################
 
 def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden):
     samples=[]
@@ -128,22 +158,24 @@ def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden)
         samples+=extraSamples
         return samples
 
-def writeTrainingData(sl, alphabet):
-    tSL = "./training/T_"+sl+".txt"
+############################## WRITE TEST DATA ################################
+
+def writeTest1data(sl,alphabet):
+    tSL = "./test/test1_"+sl+".txt"
     f=open(tSL, "w")
     f.seek(0)
     trainingPos=[]
     trainingNeg=[]
 
     if sl == "SL2":
-        trainingPos = generateSLPositive(alphabet, 20, checkForbiddenSL2, 1, 26)
-        trainingNeg = generateSLNegative(alphabet, 1, 26, 20, checkForbiddenSL2)
+        trainingPos = generateSLTest1(alphabet,trainingPosSL2, 20, 'POS', checkForbiddenSL2)
+        trainingNeg = generateSLTest1(alphabet,trainingNegSL2, 20, 'NEG', checkForbiddenSL2)
     elif sl =="SL4":
-        trainingPos = generateSLPositive(alphabet, 200, checkForbiddenSL4, 1, 26)
-        trainingNeg = generateSLNegative(alphabet, 4, 26, 200, checkForbiddenSL4)
+        trainingPos = generateSLTest1(alphabet,trainingPosSL4, 200, 'POS', checkForbiddenSL4)
+        trainingNeg = generateSLTest1(alphabet,trainingNegSL4, 200, 'NEG', checkForbiddenSL4)
     else:
-        trainingPos = generateSLPositive(alphabet, 2000, checkForbiddenSL8, 1, 26)
-        trainingNeg = generateSLNegative(alphabet, 8, 26, 2000, checkForbiddenSL8)
+        trainingPos = generateSLTest1(alphabet,trainingPosSL8, 2000, 'POS', checkForbiddenSL8)
+        trainingNeg = generateSLTest1(alphabet,trainingNegSL8, 2000, 'NEG', checkForbiddenSL8)
 
     for x in trainingPos:
         f.write(x)
@@ -155,13 +187,42 @@ def writeTrainingData(sl, alphabet):
     f.close()
     return (trainingPos, trainingNeg)
 
+
+def writeTest2data(sl,alphabet):
+    tSL = "./test/test2_"+sl+".txt"
+    f=open(tSL, "w")
+    f.seek(0)
+    trainingPos=[]
+    trainingNeg=[]
+
+    if sl == "SL2":
+        trainingPos = generateSLPositive(alphabet, 20, checkForbiddenSL2, 26, 50)
+        trainingNeg = generateSLNegative(alphabet, 26, 50, 20, checkForbiddenSL2)
+    elif sl =="SL4":
+        trainingPos = generateSLPositive(alphabet, 200, checkForbiddenSL4, 26, 50)
+        trainingNeg = generateSLNegative(alphabet, 26, 50, 200, checkForbiddenSL4)
+    else:
+        trainingPos = generateSLPositive(alphabet, 2000, checkForbiddenSL8, 26, 50)
+        trainingNeg = generateSLNegative(alphabet, 26, 50, 2000, checkForbiddenSL8)
+
+    for x in trainingPos:
+        f.write(x)
+        f.write('\n')
+    for x in trainingNeg:
+        f.write(x)
+        f.write('\n')
+
+    f.close()
+    return (trainingPos, trainingNeg)
+
+
 ##############################################################################
 ##############################################################################
 if __name__ == "__main__":
     alphabet=sys.argv[1]
 
 #########################################################################
-#########################CREATE TRAINING SETS############################
+######################### CREATE TRAINING SETS ############################
 #########################################################################
 tset = writeTrainingData("SL2", alphabet)
 trainingPosSL2 = tset[0]
@@ -171,31 +232,38 @@ tset = writeTrainingData("SL4", alphabet)
 trainingPosSL4 = tset[0]
 trainingNegSL4 = tset[1]
 
-tset = writeTrainingData("SL8", alphabet)
-trainingPosSL8 = tset[0]
-trainingNegSL8 = tset[1]
+#tset = writeTrainingData("SL8", alphabet)
+#trainingPosSL8 = tset[0]
+#trainingNegSL8 = tset[1]
 
 ##########################################################################
-#########################CREATE TEST SETS#################################
+######################### CREATE TEST SETS #################################
 ##########################################################################
 
 #########################   TEST 1  ######################################
 
-test1PosSL2 = generateSLTest1(alphabet,trainingPosSL2, 20, 'POS', checkForbiddenSL2)
-test1PosSL4 = generateSLTest1(alphabet,trainingPosSL4, 200, 'POS', checkForbiddenSL4)
-test1PosSL8 = generateSLTest1(alphabet,trainingPosSL8, 2000, 'POS', checkForbiddenSL8)
+test1setSL2 = writeTest1data("SL2",alphabet)
+test1PosSL2 = test1setSL2[0]
+test1NegSL2 = test1setSL2[1]
 
-test1NegSL2 = generateSLTest1(alphabet,trainingNegSL2, 20, 'NEG', checkForbiddenSL2)
-test1NegSL4 = generateSLTest1(alphabet,trainingNegSL4, 200, 'NEG', checkForbiddenSL4)
-test1NegSL8 = generateSLTest1(alphabet,trainingNegSL8, 2000, 'NEG', checkForbiddenSL8)
+test1setSL4 = writeTest1data("SL4",alphabet)
+test1PosSL4 = test1setSL4[0]
+test1NegSL4 = test1setSL4[1]
+
+test1setSL8 = writeTest1data("SL8",alphabet)
+test1PosSL8 = test1setSL8[0]
+test1NegSL8 = test1setSL8[1]
 
 #########################   TEST 2  ######################################
 
-test2PosSL2 = generateSLPositive(alphabet, 20, checkForbiddenSL2, 26, 50)
-test2NegSL2 = generateSLNegative(alphabet, 26, 50, 20, checkForbiddenSL2)
+test2setSL2 = writeTest2data("SL2", alphabet)
+test2PosSL2 = test2setSL2[0]
+test2NegSL2 = test2setSL2[1]
 
-test2PosSL4 = generateSLPositive(alphabet, 200, checkForbiddenSL4, 26, 50)
-test2NegSL4 = generateSLNegative(alphabet, 26, 50, 200, checkForbiddenSL4)
+test2setSL4 = writeTest2data("SL4", alphabet)
+test2PosSL4 = test2setSL4[0]
+test2NegSL4 = test2setSL4[1]
 
-test2PosSL8 = generateSLPositive(alphabet, 2000, checkForbiddenSL8, 26, 50)
-test2NegSL8 = generateSLNegative(alphabet, 26, 50, 2000, checkForbiddenSL8)
+test2setSL8 = writeTest2data("SL8", alphabet)
+test2PosSL8 = test2setSL4[0]
+test2NegSL8 = test2setSL4[1]
