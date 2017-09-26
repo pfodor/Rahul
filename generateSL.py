@@ -97,55 +97,7 @@ def generateSLNegative(alphabet, minWordLength, maxWordLength, sampleAmount, che
             samplePerLength = []
     return negSamples
 
-
-def writeTrainingData(sl, alphabet):
-    tSL = "./training/T_"+sl+".txt"
-    f=open(tSL, "w")
-    f.seek(0)
-    trainingPos=[]
-    trainingNeg=[]
-
-    if sl == "SL2":
-        trainingPos = generateSLPositive(alphabet, 20, checkForbiddenSL2, 1, 26)
-        trainingNeg = generateSLNegative(alphabet, 1, 26, 20, checkForbiddenSL2)
-    elif sl =="SL4":
-        trainingPos = generateSLPositive(alphabet, 200, checkForbiddenSL4, 1, 26)
-        trainingNeg = generateSLNegative(alphabet, 4, 26, 200, checkForbiddenSL4)
-    else:
-        trainingPos = generateSLPositive(alphabet, 2000, checkForbiddenSL8, 1, 26)
-        trainingNeg = generateSLNegative(alphabet, 8, 26, 2000, checkForbiddenSL8)
-
-    for x in trainingPos:
-        f.write(x)
-        f.write('\n')
-    for x in trainingNeg:
-        f.write(x)
-        f.write('\n')
-
-    f.close()
-    return (trainingPos, trainingNeg)
-
-#########################################################################
-#########################CREATE TRAINING SETS############################
-#########################################################################
-tset = writeTrainingData("SL2", 'abc')
-trainingPosSL2 = tset[0]
-trainingNegSL2 = tset[1]
-
-tset = writeTrainingData("SL4", 'abc')
-trainingPosSL4 = tset[0]
-trainingNegSL4 = tset[1]
-
-#tset = writeTrainingData("SL8", 'abc')
-#trainingPosSL8 = tset[0]
-#trainingNegSL8 = tset[1]
-
-
-##########################################################################
-#########################CREATE TEST SETS#################################
-##########################################################################
-
-#########################   TEST 1  ######################################
+#################################GENERATE TEST 1########################
 
 def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden):
     samples=[]
@@ -176,16 +128,68 @@ def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden)
         samples+=extraSamples
         return samples
 
-test1PosSL2 = generateSLTest1('abc',trainingPosSL2, 20, 'POS', checkForbiddenSL2)
-test1PosSL4 = generateSLTest1('abc',trainingPosSL4, 200, 'POS', checkForbiddenSL4)
-#test1PosSL8 = generateSLTest1('abc',trainingPosSL8, 2000, 'POS', checkForbiddenSL8)
+def writeTrainingData(sl, alphabet):
+    tSL = "./training/T_"+sl+".txt"
+    f=open(tSL, "w")
+    f.seek(0)
+    trainingPos=[]
+    trainingNeg=[]
 
-test1NegSL2 = generateSLTest1('abc',trainingNegSL2, 20, 'NEG', checkForbiddenSL2)
-test1NegSL4 = generateSLTest1('abc',trainingNegSL4, 200, 'NEG', checkForbiddenSL4)
-#test1NegSL8 = generateSLTest1('abc',trainingNegSL8, 2000, 'NEG', checkForbiddenSL8)
+    if sl == "SL2":
+        trainingPos = generateSLPositive(alphabet, 20, checkForbiddenSL2, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 1, 26, 20, checkForbiddenSL2)
+    elif sl =="SL4":
+        trainingPos = generateSLPositive(alphabet, 200, checkForbiddenSL4, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 4, 26, 200, checkForbiddenSL4)
+    else:
+        trainingPos = generateSLPositive(alphabet, 2000, checkForbiddenSL8, 1, 26)
+        trainingNeg = generateSLNegative(alphabet, 8, 26, 2000, checkForbiddenSL8)
+
+    for x in trainingPos:
+        f.write(x)
+        f.write('\n')
+    for x in trainingNeg:
+        f.write(x)
+        f.write('\n')
+
+    f.close()
+    return (trainingPos, trainingNeg)
+
+##############################################################################
+##############################################################################
+if __name__ == "__main__":
+    alphabet=sys.argv[1]
+
+#########################################################################
+#########################CREATE TRAINING SETS############################
+#########################################################################
+tset = writeTrainingData("SL2", alphabet)
+trainingPosSL2 = tset[0]
+trainingNegSL2 = tset[1]
+
+tset = writeTrainingData("SL4", alphabet)
+trainingPosSL4 = tset[0]
+trainingNegSL4 = tset[1]
+
+tset = writeTrainingData("SL8", alphabet)
+trainingPosSL8 = tset[0]
+trainingNegSL8 = tset[1]
+
+##########################################################################
+#########################CREATE TEST SETS#################################
+##########################################################################
+
+#########################   TEST 1  ######################################
+
+test1PosSL2 = generateSLTest1(alphabet,trainingPosSL2, 20, 'POS', checkForbiddenSL2)
+test1PosSL4 = generateSLTest1(alphabet,trainingPosSL4, 200, 'POS', checkForbiddenSL4)
+test1PosSL8 = generateSLTest1(alphabet,trainingPosSL8, 2000, 'POS', checkForbiddenSL8)
+
+test1NegSL2 = generateSLTest1(alphabet,trainingNegSL2, 20, 'NEG', checkForbiddenSL2)
+test1NegSL4 = generateSLTest1(alphabet,trainingNegSL4, 200, 'NEG', checkForbiddenSL4)
+test1NegSL8 = generateSLTest1(alphabet,trainingNegSL8, 2000, 'NEG', checkForbiddenSL8)
 
 #########################   TEST 2  ######################################
-alphabet = 'abc'
 
 test2PosSL2 = generateSLPositive(alphabet, 20, checkForbiddenSL2, 26, 50)
 test2NegSL2 = generateSLNegative(alphabet, 26, 50, 20, checkForbiddenSL2)
