@@ -1,6 +1,13 @@
 import rstr
+from itertools import product
 
 #This Function checks if a word is forbidden in SL2
+
+def forbiddenChecker(word, posORneg, checkForbidden):
+    if posORneg == "POS":
+        return checkForbidden(word)
+    if posORneg == "NEG":
+        return not checkForbidden(word)
 
 def checkForbiddenSL2(word):
     forbidden = False
@@ -168,21 +175,91 @@ def generateSL8Negative(alphabet):
             samplePerLength = []
     return negSamples
 
+def writeTrainingData(sl, alphabet):
+    tSL = "./training/T_"+sl+".txt"
+    f=open(tSL, "w")
+    f.seek(0)
+    trainingPos=[]
+    trainingNeg=[]
 
+    if sl == "SL2":
+        trainingPos = generateSL2Positive(alphabet)
+        trainingNeg = generateSL2Negative(alphabet)
+    elif sl =="SL4":
+        trainingPos = generateSL4Positive(alphabet)
+        trainingNeg = generateSL4Negative(alphabet)
+    else:
+        trainingPos = generateSL8Positive(alphabet)
+        trainingNeg = generateSL8Negative(alphabet)
+
+    for x in trainingPos:
+        f.write(x)
+        f.write('\n')
+    for x in trainingNeg:
+        f.write(x)
+        f.write('\n')
+
+    f.close()
+    return (trainingPos, trainingNeg)
+
+#########################################################################
+#########################CREATE TRAINING SETS############################
+#########################################################################
+tset = writeTrainingData("SL2", 'abc')
+trainingPosSL2 = tset[0]
+trainingNegSL2 = tset[1]
+
+print(trainingPosSL2)
+print("=============================================================")
+
+tset = writeTrainingData("SL4", 'abc')
+trainingPosSL4 = tset[0]
+trainingNegSL4 = tset[1]
+
+#tset = writeTrainingData("SL8", 'abc')
+#trainingPosSL8 = tset[0]
+#trainingNegSL8 = tset[1]
 
 
 ##########################################################################
 #########################CREATE TEST SETS#################################
-#########################################################################
+##########################################################################
 
-trainingPosSL2 = generateSL2Positive('abc')
-trainingPosSL4 = generateSL4Positive('abc')
-trainingPosSL8 = generateSL8Positive('abc')
+def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden):
+    samples=[]
+    for t in range(1,26):
+        allCombos = [''.join(x) for x in product(alphabet, repeat = t)]
+        print(samples)
+        print("#########################################################")
+        for x in allCombos:
+            if len(x) == t:
+                if x not in trainingSL:
+                    if not forbiddenChecker(x, posORneg, checkForbidden):
+                        samplePerLength = []
+                        while len(samplePerLength)<sampleAmount:
+                            word = rstr.rstr(alphabet, t)
+                            # check if word is forbidden
+                            forbidden = forbiddenChecker(word, posORneg, checkForbidden)
+                            if not forbidden:
+                                if word not in trainingSL:
+                                    samplePerLength.append(word)
+                            samples+=samplePerLength
+        #add extra samples
+        extraSamples = []
+        while len(extraSamples) < sampleAmount*10:
+            word = rstr.rstr(alphabet, 25)
+            # check if word is forbidden
+            forbidden = forbiddenChecker(word, posORneg, checkForbidden)
+            if not forbidden:
+                if word not in trainingSL:
+                    extraSamples.append(word)
+        samples+=extraSamples
+        return samples
 
-trainingNegSL2 = generateSL2Negative('abc')
-trainingNegSL4 = generateSL4Negative('abc')
-trainingNegSL8 = generateSL8Negative('abc')
+test1PosSL2 = generateSLTest1('abc',trainingPosSL2, 20, 'POS', checkForbiddenSL2)
+test1PosSL4 = generateSLTest1('abc',trainingPosSL4, 200, 'POS', checkForbiddenSL4)
+test1PosSL8 = generateSLTest1('abc',trainingPosSL8, 2000, 'POS', checkForbiddenSL8)
 
-print(len(trainingPosSL2))
-for x in trainingPosSL2:
-    print(x,len(x))
+test1NegSL2 = generateSLTest1('abc',trainingNegSL2, 20, 'NEG', checkForbiddenSL2)
+test1NegSL4 = generateSLTest1('abc',trainingNegSL4, 200, 'NEG', checkForbiddenSL4)
+test1NegSL8 = generateSLTest1('abc',trainingNegSL8, 2000, 'NEG', checkForbiddenSL8)
