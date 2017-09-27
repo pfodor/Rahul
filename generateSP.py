@@ -2,6 +2,7 @@ import rstr
 import re
 from itertools import product
 import sys
+import os
 
 def forbiddenChecker(word, posORneg, checkForbidden):
     if posORneg == "POS":
@@ -82,8 +83,8 @@ def generateSPNegative(alphabet, minWordLength, maxWordLength, sampleAmount, che
     return negSamples
 ########################### WRITE TRAINING DATA ###############################
 
-def writeTrainingData(sp, alphabet):
-    tSP = "./training/T_"+sp+".txt"
+def writeTrainingData(trainDir,sp, alphabet):
+    tSP = "./"+trainDir+"/T_"+sp+".txt"
     f=open(tSP, "w")
     f.seek(0)
     trainingPos=[]
@@ -141,8 +142,8 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden)
 ############################# WRITE TEST DATA ###############################
 
 
-def writeTest1data(sp,alphabet):
-    tSP = "./test/test1_"+sp+".txt"
+def writeTest1data(testDir,sp,alphabet):
+    tSP = "./"+testDir+"/test1_"+sp+".txt"
     f=open(tSP, "w")
     f.seek(0)
     trainingPos=[]
@@ -169,8 +170,8 @@ def writeTest1data(sp,alphabet):
     return (trainingPos, trainingNeg)
 
 
-def writeTest2data(sl,alphabet):
-    tSP = "./test/test2_"+sl+".txt"
+def writeTest2data(testDir,sp,alphabet):
+    tSP = "./"+testDir+"/test2_"+sp+".txt"
     f=open(tSP, "w")
     f.seek(0)
     trainingPos=[]
@@ -201,20 +202,25 @@ def writeTest2data(sl,alphabet):
 ##############################################################################
 if __name__ == "__main__":
     alphabet=sys.argv[1]
-
+    trainDir=sys.argv[2]
+    testDir=sys.argv[3]
+    if not os.path.exists(trainDir):
+        os.makedirs(trainDir)
+    if not os.path.exists(testDir):
+        os.makedirs(testDir)
 ############################################################################
 ######################### CREATE TRAINING SETS #############################
 ############################################################################
 
-tset = writeTrainingData("SP2", alphabet)
+tset = writeTrainingData(trainDir,"SP2", alphabet)
 trainingPosSP2 = tset[0]
 trainingNegSP2 = tset[1]
 
-tset = writeTrainingData("SP4", alphabet)
+tset = writeTrainingData(trainDir,"SP4", alphabet)
 trainingPosSP4 = tset[0]
 trainingNegSP4 = tset[1]
 
-tset = writeTrainingData("SP8", alphabet)
+tset = writeTrainingData(trainDir,"SP8", alphabet)
 trainingPosSP8 = tset[0]
 trainingNegSP8 = tset[1]
 
@@ -225,28 +231,28 @@ trainingNegSP8 = tset[1]
 
 #########################   TEST 1  ######################################
 
-test1setSP2 = writeTest1data("SP2",alphabet)
+test1setSP2 = writeTest1data(testDir,"SP2",alphabet)
 test1PosSP2 = test1setSP2[0]
 test1NegSP2 = test1setSP2[1]
 
-test1setSP4 = writeTest1data("SP4",alphabet)
+test1setSP4 = writeTest1data(testDir,"SP4",alphabet)
 test1PosSP4 = test1setSP4[0]
 test1NegSP4 = test1setSP4[1]
 
-test1setSP8 = writeTest1data("SP8",alphabet)
+test1setSP8 = writeTest1data(testDir,"SP8",alphabet)
 test1PosSP8 = test1setSP8[0]
 test1NegSP8 = test1setSP8[1]
 
 #########################   TEST 2  ######################################
 
-test2setSP2 = writeTest2data("SP2", alphabet)
+test2setSP2 = writeTest2data(testDir,"SP2", alphabet)
 test2PosSP2 = test2setSP2[0]
 test2NegSP2 = test2setSP2[1]
 
-test2setSP4 = writeTest2data("SP4", alphabet)
+test2setSP4 = writeTest2data(testDir,"SP4", alphabet)
 test2PosSP4 = test2setSP4[0]
 test2NegSP4 = test2setSP4[1]
 
-test2setSP8 = writeTest2data("SP8", alphabet)
+test2setSP8 = writeTest2data(testDir,"SP8", alphabet)
 test2PosSP8 = test2setSP4[0]
 test2NegSP8 = test2setSP4[1]
