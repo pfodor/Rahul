@@ -8,3 +8,7 @@
 * We wanted: redo the tests for alphabets of 3, 10, 56 letters
 
 * Tests: Test1 (Strings of length 25), Test2 (strings of length 26-50)
+
+* Positive are the samples that are not in the forbidden category.
+
+* Negative are the samples that are in the forbidden category.

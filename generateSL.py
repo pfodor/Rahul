@@ -197,9 +197,14 @@ def generateSL4_8Negative(alphabet, minWordLength, maxWordLength, sampleAmount, 
 ############################## WRITE TRAINING DATA ##########################
 
 def writeTrainingData(trainDir,sl, alphabet):
-    tSL = "./"+trainDir+"/T_"+sl+".txt"
+    tSL = "./"+trainDir+"/Training_"+sl+"_positive.txt"
     f=open(tSL, "w")
     f.seek(0)
+
+    tSL = "./"+trainDir+"/Training_"+sl+"_negative.txt"
+    f1=open(tSL, "w")
+    f1.seek(0)
+    
     trainingPos=[]
     trainingNeg=[]
 
@@ -216,10 +221,11 @@ def writeTrainingData(trainDir,sl, alphabet):
         f.write(x)
         f.write('\n')
     for x in trainingNeg:
-        f.write(x)
-        f.write('\n')
+        f1.write(x)
+        f1.write('\n')
 
     f.close()
+    f1.close()
     return (trainingPos, trainingNeg)
 
 ################################# GENERATE TEST 1 ########################
@@ -359,9 +365,14 @@ def generateSLTest1(alphabet, trainingSL, sampleAmount, posORneg, checkForbidden
 ############################## WRITE TEST DATA ################################
 
 def writeTest1data(testDir,sl,alphabet):
-    tSL = "./"+testDir+"/test1_"+sl+".txt"
+    tSL = "./"+testDir+"/test1_"+sl+"_positive.txt"
     f=open(tSL, "w")
     f.seek(0)
+
+    tSL = "./"+testDir+"/test1_"+sl+"_negative.txt"
+    f1=open(tSL, "w")
+    f1.seek(0)
+    
     trainingPos=[]
     trainingNeg=[]
     m = 0
@@ -385,17 +396,22 @@ def writeTest1data(testDir,sl,alphabet):
         f.write(x)
         f.write('\n')
     for x in trainingNeg:
-        f.write(x)
-        f.write('\n')
+        f1.write(x)
+        f1.write('\n')
 
     f.close()
+    f1.close()
     return (trainingPos, trainingNeg)
 
 
 def writeTest2data(testDir, sl,alphabet):
-    tSL = "./"+testDir+"/test2_"+sl+".txt"
+    tSL = "./"+testDir+"/test2_"+sl+"_positive.txt"
     f=open(tSL, "w")
     f.seek(0)
+    tSL = "./"+testDir+"/test2_"+sl+"_negative.txt"
+    f1=open(tSL, "w")
+    f1.seek(0)
+    
     trainingPos=[]
     trainingNeg=[]
 
@@ -413,10 +429,11 @@ def writeTest2data(testDir, sl,alphabet):
         f.write(x)
         f.write('\n')
     for x in trainingNeg:
-        f.write(x)
-        f.write('\n')
+        f1.write(x)
+        f1.write('\n')
 
     f.close()
+    f1.close()
     return (trainingPos, trainingNeg)
 
 
