@@ -1,0 +1,10 @@
+regex [ a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 1 | 2 | 3 | 4  ]^1 & [ b ?* | ?* a | ?* a a ?* | ?* b b  ?* ] ;
+print words > ../foma_outputs/sl2negative_56/sl2negative_56_1.txt
+regex [ a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 1 | 2 | 3 | 4  ]^2 & [ b ?* | ?* a | ?* a a ?* | ?* b b  ?* ] ;
+print words > ../foma_outputs/sl2negative_56/sl2negative_56_2.txt
+regex [ a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 1 | 2 | 3 | 4  ]^3 & [ b ?* | ?* a | ?* a a ?* | ?* b b  ?* ] ;
+print words > ../foma_outputs/sl2negative_56/sl2negative_56_3.txt
+regex [ a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 1 | 2 | 3 | 4  ]^4 & [ b ?* | ?* a | ?* a a ?* | ?* b b  ?* ] ;
+print words > ../foma_outputs/sl2negative_56/sl2negative_56_4.txt
+regex [ a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 1 | 2 | 3 | 4  ]^5 & [ b ?* | ?* a | ?* a a ?* | ?* b b  ?* ] ;
+print words > ../foma_outputs/sl2negative_56/sl2negative_56_5.txt
