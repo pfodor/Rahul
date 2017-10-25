@@ -1,0 +1,10 @@
+regex [ a | b | c | d | e | f | g | h | i | j  ]^1 & [ ?* a ?* b ?* ] ;
+print words > ../foma_outputs/sp2negative_10/sp2negative_10_1.txt
+regex [ a | b | c | d | e | f | g | h | i | j  ]^2 & [ ?* a ?* b ?* ] ;
+print words > ../foma_outputs/sp2negative_10/sp2negative_10_2.txt
+regex [ a | b | c | d | e | f | g | h | i | j  ]^3 & [ ?* a ?* b ?* ] ;
+print words > ../foma_outputs/sp2negative_10/sp2negative_10_3.txt
+regex [ a | b | c | d | e | f | g | h | i | j  ]^4 & [ ?* a ?* b ?* ] ;
+print words > ../foma_outputs/sp2negative_10/sp2negative_10_4.txt
+regex [ a | b | c | d | e | f | g | h | i | j  ]^5 & [ ?* a ?* b ?* ] ;
+print words > ../foma_outputs/sp2negative_10/sp2negative_10_5.txt
