@@ -88,26 +88,46 @@ def generateSP2Positive(alphabet, sampleAmount, checkForbidden, minWordLength, m
     posSamples = []
     samplePerLength = []
     x = minWordLength
-    alphabet1 = alphabet.replace('a','')
-    alphabet2 = alphabet.replace('b','')
+    #alphabet1 = alphabet.replace('a','')
+    #alphabet2 = alphabet.replace('b','')
     while x < maxWordLength:
-        partitions = []
-        regex = '[alphabet1]{}[a][a]{}[alphabet2]{}'
-        regex = regex.replace('alphabet1', alphabet1)
-        regex = regex.replace('alphabet2', alphabet2)
-        partitions += findPartition(3,x-1)
-        for e in partitions:
-            rep = "{"+str(e)+"}"
-            regex=regex.replace("{}",rep,1)
-        regex2 = '|[alphabet1]{x}'
-        regex2 = regex2.replace('alphabet1',alphabet1)
-        regex2 = regex2.replace('x',str(x))
-        regex = regex+regex2
-        word = rstr.xeger(regex)
+        #partitions = []
+        #regex = '[alphabet1]{}[a][a]{}[alphabet2]{}'
+        #regex = regex.replace('alphabet1', alphabet1)
+        #regex = regex.replace('alphabet2', alphabet2)
+        #partitions += findPartition(3,x-1)
+        #for e in partitions:
+        #    rep = "{"+str(e)+"}"
+        #    regex=regex.replace("{}",rep,1)
+        #regex2 = '|[alphabet1]{x}'
+        #regex2 = regex2.replace('alphabet1',alphabet1)
+        #regex2 = regex2.replace('x',str(x))
+        #regex = regex+regex2
+        #word = rstr.xeger(regex)
+        word = random.choice(sp2PosSamples[x])
+        sp2PosSamples[x].remove(word)
         forbidden = checkForbidden(word)
         if not forbidden:
             samplePerLength.append(word)
-            print(word, x, maxWordLength,len(samplePerLength), sampleAmount, regex)
+            print(word, x, maxWordLength,len(samplePerLength), sampleAmount)
+        if len(samplePerLength) == sampleAmount:
+            x += 1
+            posSamples+=samplePerLength
+            samplePerLength = []
+    return posSamples
+
+def generateSP4Positive(alphabet, sampleAmount, checkForbidden, minWordLength, maxWordLength):
+    # GENERATE POSITIVE SAMPLES
+    posSamples = []
+    samplePerLength = []
+    x = minWordLength
+    while x < maxWordLength:
+        word = random.choice(sp4PosSamples[x])
+        sp4PosSamples[x].remove(word)
+        forbidden = checkForbidden(word)
+        if not forbidden:
+            samplePerLength.append(word)
+            print(word, x, maxWordLength,len(samplePerLength), sampleAmount)
         if len(samplePerLength) == sampleAmount:
             x += 1
             posSamples+=samplePerLength
@@ -144,18 +164,17 @@ def generateSPNegative(alphabet, minWordLength, maxWordLength, sampleAmount, che
             samplePerLength = []
     return negSamples
 
-
 def generateSP4_8Negative(alphabet, minWordLength, maxWordLength, sampleAmount, checkForbidden, testOrTrain):
     # GENERATE POSITIVE SAMPLES
     negSamples = []
     samplePerLength = []
-    regTemplate = ""
-    if checkForbidden == checkForbiddenSP4:
-        regTemplate = '([alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{})'
-    if checkForbidden == checkForbiddenSP8:
-        regTemplate = '([alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{})'
-    regTemplate = regTemplate.replace('alphabet',alphabet)
-    partitions=[]
+    #regTemplate = ""
+    #if checkForbidden == checkForbiddenSP4:
+    #    regTemplate = '([alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{})'
+    #if checkForbidden == checkForbiddenSP8:
+    #    regTemplate = '([alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{})'
+    #regTemplate = regTemplate.replace('alphabet',alphabet)
+    #partitions=[]
     x = 0
     if testOrTrain == "train":
         while len(samplePerLength)<(sampleAmount*minWordLength):
@@ -176,21 +195,30 @@ def generateSP4_8Negative(alphabet, minWordLength, maxWordLength, sampleAmount, 
     negSamples+=samplePerLength
     samplePerLength = []
     while x < maxWordLength:
-        partitions = []
+        #partitions = []
         if checkForbidden == checkForbiddenSP4:
-            partitions += findPartition(5,x-4)
+            #partitions += findPartition(5,x-4)
+            word = random.choice(sp4NegSamples[x])
+            sp4NegSamples[x].remove(word)
         if checkForbidden == checkForbiddenSP8:
-            partitions += findPartition(9,x-8)
-        regMod = regTemplate
-        for e in partitions:
-            rep = "{"+str(e)+"}"
-            regMod=regMod.replace("{}",rep,1)
-        word = rstr.xeger(regMod)
+            #partitions += findPartition(9,x-8)
+            word = random.choice(sp8NegSamples[x])
+            sp8NegSamples[x].remove(word)
+        #regMod = regTemplate
+        #for e in partitions:
+        #    rep = "{"+str(e)+"}"
+        #    regMod=regMod.replace("{}",rep,1)
+        #if checkForbidden == checkForbiddenSP8:
+        #    regMod = regTemplate
+        #    rep = '{' + str(0) + ',' + str(x-8) + '}'
+        #    regMod=regMod.replace("{}",rep)
+        #word = rstr.xeger(regMod)
         # check if word is forbidden
         forbidden = checkForbidden(word)
         if forbidden:
-            samplePerLength.append(word)
-            print(word, len(word), testOrTrain)
+            if len(word) == x:
+                samplePerLength.append(word)
+            print(word, len(word), testOrTrain, x, len(samplePerLength), sampleAmount)
         if len(samplePerLength) == sampleAmount:
             x += 1
             negSamples+=samplePerLength
@@ -201,7 +229,7 @@ def generateSP4_8Negative(alphabet, minWordLength, maxWordLength, sampleAmount, 
 
 ########################### WRITE TRAINING DATA ###############################
 
-def writeTrainingData(trainDir,sp, alphabet):
+def writeTrainingData(trainDir,sp, alphabet,x):
     tSP = "./"+trainDir+"/Training_"+sp+"_positive.txt"
     f=open(tSP, "w")
     f.seek(0)
@@ -214,14 +242,14 @@ def writeTrainingData(trainDir,sp, alphabet):
     trainingNeg=[]
 
     if sp == "SP2":
-        trainingPos = generateSPPositive(alphabet, 20, checkForbiddenSP2, 1, 26)
-        trainingNeg = generateSPNegative(alphabet, 2, 26, 20, checkForbiddenSP2)
+        trainingPos = generateSPPositive(alphabet, x, checkForbiddenSP2, 1, 26)
+        trainingNeg = generateSPNegative(alphabet, 2, 26, x, checkForbiddenSP2)
     elif sp =="SP4":
-        trainingPos = generateSPPositive(alphabet, 200, checkForbiddenSP4, 1, 26)
-        trainingNeg = generateSP4_8Negative(alphabet, 4, 26, 200, checkForbiddenSP4,"train")
+        trainingPos = generateSPPositive(alphabet, x, checkForbiddenSP4, 1, 26)
+        trainingNeg = generateSP4_8Negative(alphabet, 4, 26, x, checkForbiddenSP4,"train")
     else:
-        trainingPos = generateSPPositive(alphabet, 2000, checkForbiddenSP8, 1, 26)
-        trainingNeg = generateSP4_8Negative(alphabet, 8, 26, 2000, checkForbiddenSP8,"train")
+        trainingPos = generateSPPositive(alphabet, x, checkForbiddenSP8, 1, 26)
+        trainingNeg = generateSP4_8Negative(alphabet, 8, 26, x, checkForbiddenSP8,"train")
 
     for x in trainingPos:
         f.write(x)
@@ -264,6 +292,7 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden,
         while len(samplePerLength)<sampleAmount:
             word = rstr.rstr(alphabet, t)
             if (checkForbidden == checkForbiddenSP4) and (posORneg == 'NEG'):
+                """
                 partitions = []
                 regex = '([alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{})'
                 regex = regex.replace("alphabet", alphabet)
@@ -272,7 +301,11 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden,
                     rep = "{"+str(e)+"}"
                     regex=regex.replace("{}",rep,1)
                 word = rstr.xeger(regex)
+                """
+                word = random.choice(sp4NegSamples[t])
+                sp4NegSamples[t].remove(word)
             if (checkForbidden == checkForbiddenSP8) and (posORneg == 'NEG'):
+                """
                 partitions = []
                 regex = '([alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{})'
                 regex = regex.replace("alphabet", alphabet)
@@ -281,6 +314,9 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden,
                     rep = "{"+str(e)+"}"
                     regex=regex.replace("{}",rep,1)
                 word = rstr.xeger(regex)
+                """
+                word = random.choice(sp8NegSamples[t])
+                sp8NegSamples[t].remove(word)
             forbidden = forbiddenChecker(word, posORneg, checkForbidden)
             if not forbidden:
                 if word not in trainingSP:
@@ -294,6 +330,7 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden,
         word = rstr.rstr(alphabet, 25)
         # check if word is forbidden
         if (checkForbidden == checkForbiddenSP4) and (posORneg == 'NEG'):
+            """
             partitions = []
             regex = '([alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{})'
             regex = regex.replace("alphabet", alphabet)
@@ -302,7 +339,11 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden,
                 rep = "{"+str(e)+"}"
                 regex=regex.replace("{}",rep,1)
             word = rstr.xeger(regex)
+            """
+            word = random.choice(sp4NegSamples[25])
+            sp4NegSamples[25].remove(word)
         if (checkForbidden == checkForbiddenSP8) and (posORneg == 'NEG'):
+            """
             partitions = []
             regex = '([alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{}a[alphabet]{}b[alphabet]{}b[alphabet]{}a[alphabet]{})'
             regex = regex.replace("alphabet", alphabet)
@@ -311,17 +352,21 @@ def generateSPTest1(alphabet,trainingSP, sampleAmount, posORneg, checkForbidden,
                 rep = "{"+str(e)+"}"
                 regex=regex.replace("{}",rep,1)
             word = rstr.xeger(regex)
+            """
+            word = random.choice(sp8NegSamples[25])
+            sp8NegSamples[25].remove(word)
         forbidden = forbiddenChecker(word, posORneg, checkForbidden)
         if not forbidden:
             if word not in trainingSP:
                 extraSamples.append(word)
+                print(word, len(word), len(extraSamples), sampleAmount*10, posORneg, "generateSPTest1--EXTRA SAMPLES",checkForbidden)
     samples+=extraSamples
     return samples
 
 ############################# WRITE TEST DATA ###############################
 
 
-def writeTest1data(testDir,sp,alphabet):
+def writeTest1data(testDir,sp,alphabet,x):
     tSP = "./"+testDir+"/test1_"+sp+"_positive.txt"
     f1=open(tSP, "w")
     f1.seek(0)
@@ -347,8 +392,8 @@ def writeTest1data(testDir,sp,alphabet):
             m=5
         for l in f:
             negSamples.append(l[:-1])            
-        trainingPos = generateSPTest1(alphabet,trainingPosSP2, 20, 'POS', checkForbiddenSP2,m)
-        trainingNeg = generateSPTest1(alphabet,trainingNegSP2, 20, 'NEG', checkForbiddenSP2,m)
+        trainingPos = generateSPTest1(alphabet,trainingPosSP2, x, 'POS', checkForbiddenSP2,m)
+        trainingNeg = generateSPTest1(alphabet,trainingNegSP2, x, 'NEG', checkForbiddenSP2,m)
     elif sp =="SP4":
         
         f=''
@@ -364,10 +409,10 @@ def writeTest1data(testDir,sp,alphabet):
         for l in f:
             negSamples.append(l[:-1])
         if len(alphabet) > 3 :
-            trainingPos = generateSPTest1(alphabet,trainingPosSP4, 200, 'POS', checkForbiddenSP4,5)
+            trainingPos = generateSPTest1(alphabet,trainingPosSP4, x, 'POS', checkForbiddenSP4,5)
         else:
-            trainingPos = generateSPTest1(alphabet,trainingPosSP4, 200, 'POS', checkForbiddenSP4,m)
-        trainingNeg = generateSPTest1(alphabet,trainingNegSP4, 200, 'NEG', checkForbiddenSP4,m)
+            trainingPos = generateSPTest1(alphabet,trainingPosSP4, x, 'POS', checkForbiddenSP4,m)
+        trainingNeg = generateSPTest1(alphabet,trainingNegSP4, x, 'NEG', checkForbiddenSP4,m)
     else:
 
         f=''
@@ -387,10 +432,10 @@ def writeTest1data(testDir,sp,alphabet):
             x = 5
             if len(alphabet) > 10:
                 x = 4
-            trainingPos = generateSPTest1(alphabet,trainingPosSP8, 2000, 'POS', checkForbiddenSP8,x)
+            trainingPos = generateSPTest1(alphabet,trainingPosSP8, x, 'POS', checkForbiddenSP8,x)
         else:
-            trainingPos = generateSPTest1(alphabet,trainingPosSP8, 2000, 'POS', checkForbiddenSP8,m)
-        trainingNeg = generateSPTest1(alphabet,trainingNegSP8, 2000, 'NEG', checkForbiddenSP8,m)
+            trainingPos = generateSPTest1(alphabet,trainingPosSP8, x, 'POS', checkForbiddenSP8,m)
+        trainingNeg = generateSPTest1(alphabet,trainingNegSP8, x, 'NEG', checkForbiddenSP8,m)
 
     for x in trainingPos:
         f1.write(x)
@@ -405,7 +450,7 @@ def writeTest1data(testDir,sp,alphabet):
     return (trainingPos, trainingNeg)
 
 
-def writeTest2data(testDir,sp,alphabet):
+def writeTest2data(testDir,sp,alphabet,x):
     tSP = "./"+testDir+"/test2_"+sp+"_positive.txt"
     f=open(tSP, "w")
     f.seek(0) 
@@ -419,16 +464,16 @@ def writeTest2data(testDir,sp,alphabet):
     print("start test2 data")
     if sp == "SP2":
         print("start sp2 test2 data")
-        trainingPos = generateSP2Positive(alphabet, 20, checkForbiddenSP2, 26, 51)
-        trainingNeg = generateSPNegative(alphabet, 26, 51, 20, checkForbiddenSP2)
+        trainingPos = generateSP2Positive(alphabet, x, checkForbiddenSP2, 26, 51)
+        trainingNeg = generateSPNegative(alphabet, 26, 51, x, checkForbiddenSP2)
     elif sp =="SP4":
         print("start sp4 test2 data")
-        trainingPos = generateSPPositive(alphabet, 200, checkForbiddenSP4, 26, 51)
-        trainingNeg = generateSP4_8Negative(alphabet, 26, 51, 200, checkForbiddenSP4, "test")
+        trainingPos = generateSP4Positive(alphabet, x, checkForbiddenSP4, 26, 51)
+        trainingNeg = generateSP4_8Negative(alphabet, 26, 51, x, checkForbiddenSP4, "test")
     else:
         print("start sp8 test2 data")
-        trainingPos = generateSPPositive(alphabet, 2000, checkForbiddenSP8, 26, 51)
-        trainingNeg = generateSP4_8Negative(alphabet, 26, 51, 2000, checkForbiddenSP8, "test")
+        trainingPos = generateSPPositive(alphabet, x, checkForbiddenSP8, 26, 51)
+        trainingNeg = generateSP4_8Negative(alphabet, 26, 51, x, checkForbiddenSP8, "test")
 
     for x in trainingPos:
         f.write(x)
@@ -442,63 +487,153 @@ def writeTest2data(testDir,sp,alphabet):
     return (trainingPos, trainingNeg)
 
 
+def fillNegSamples(alphabet):
+    f=''
+    f2=''
+    if len(alphabet) == 3:
+        f = open('./foma2_outputs/sp2negative_3.txt','r')
+        f2 = open('./foma2_outputs/sp2positive_3.txt','r')
+    if len(alphabet) == 10:
+        f = open('./foma2_outputs/sp2negative_10.txt','r')
+        f2 = open('./foma2_outputs/sp2positive_10.txt','r')
+    if len(alphabet) == 56:
+        f = open('./foma2_outputs/sp2negative_56.txt','r')
+        f2 = open('./foma2_outputs/sp2positive_56.txt','r')
+    for l in f:
+        s = l[:-1]
+        if len(s) in sp2NegSamples:
+            sp2NegSamples[len(s)].append(s)
+        else:
+            sp2NegSamples[len(s)] = [s]
+    for l in f2:
+        s = l[:-1]
+        if len(s) in sp2PosSamples:
+            sp2PosSamples[len(s)].append(s)
+        else:
+            sp2PosSamples[len(s)] = [s]
+                                        
+        
+    f=''
+    if len(alphabet) == 3:
+        f = open('./foma2_outputs/sp4negative_3.txt','r')
+        f2 = open('./foma2_outputs/sp4positive_3.txt','r')
+    if len(alphabet) == 10:
+        f = open('./foma2_outputs/sp4negative_10.txt','r')
+        f2 = open('./foma2_outputs/sp4positive_10.txt','r')
+    if len(alphabet) == 56:
+        f = open('./foma2_outputs/sp4negative_56.txt','r')
+        f2 = open('./foma2_outputs/sp4positive_56.txt','r')
+    for l in f:
+        s = l[:-1]
+        if len(s) in sp4NegSamples:
+            sp4NegSamples[len(s)].append(s)
+        else:
+            sp4NegSamples[len(s)] = [s]
+    for l in f2:
+        s = l[:-1]
+        if len(s) in sp4PosSamples:
+            sp4PosSamples[len(s)].append(s)
+        else:
+            sp4PosSamples[len(s)] = [s]
+            
+    f=''
+    if len(alphabet) == 3:
+        f = open('./foma2_outputs/sp8negative_3.txt','r')
+    if len(alphabet) == 10:
+        f = open('./foma2_outputs/sp8negative_10.txt','r')
+    if len(alphabet) == 56:
+        f = open('./foma2_outputs/sp8negative_56.txt','r')        
+    for l in f:
+        s = l[:-1]
+        if len(s) in sp8NegSamples:
+            sp8NegSamples[len(s)].append(s)
+        else:
+            sp8NegSamples[len(s)] = [s]
+
+
 ##############################################################################
 ##############################################################################
 if __name__ == "__main__":
     alphabet=sys.argv[1]
-    trainDir=sys.argv[2]
-    testDir=sys.argv[3]
+    trainDirOrig=sys.argv[2]
+    testDirOrig=sys.argv[3]
+    if not os.path.exists(trainDirOrig):
+        os.makedirs(trainDirOrig)
+    if not os.path.exists(testDirOrig):
+        os.makedirs(testDirOrig)
+
+
+
+############################################################################
+######################### CREATE TRAINING SETS #############################
+############################################################################
+sampleSizes = [200,2000]
+
+for x in sampleSizes:
+
+    sp2NegSamples={}
+    sp2PosSamples={}
+    sp4NegSamples={}
+    sp4PosSamples={}
+    sp8NegSamples={}
+    fillNegSamples(alphabet)
+
+    i = x * 25 * 2
+    i = int(i / 1000)
+    trainDir = trainDirOrig
+    testDir = testDirOrig
+    trainDir +='/'+str(i)+'k'
+    testDir +='/'+str(i)+'k'
+
     if not os.path.exists(trainDir):
         os.makedirs(trainDir)
     if not os.path.exists(testDir):
         os.makedirs(testDir)
-############################################################################
-######################### CREATE TRAINING SETS #############################
-############################################################################
-tset = writeTrainingData(trainDir,"SP2", alphabet)
-trainingPosSP2 = tset[0]
-trainingNegSP2 = tset[1]
+    
+    tset = writeTrainingData(trainDir,"SP2", alphabet, x)
+    trainingPosSP2 = tset[0]
+    trainingNegSP2 = tset[1]
 
-tset = writeTrainingData(trainDir,"SP4", alphabet)
-trainingPosSP4 = tset[0]
-trainingNegSP4 = tset[1]
+    tset = writeTrainingData(trainDir,"SP4", alphabet, x)
+    trainingPosSP4 = tset[0]
+    trainingNegSP4 = tset[1]
 
-tset = writeTrainingData(trainDir,"SP8", alphabet)
-trainingPosSP8 = tset[0]
-trainingNegSP8 = tset[1]
+    tset = writeTrainingData(trainDir,"SP8", alphabet, x)
+    trainingPosSP8 = tset[0]
+    trainingNegSP8 = tset[1]
 
 
-############################################################################
-######################### CREATE TEST SETS #################################
-############################################################################
+    ############################################################################
+    ######################### CREATE TEST SETS #################################
+    ############################################################################
 
-#########################   TEST 1  ######################################
-allCombos = [None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None]
+    #########################   TEST 1  ######################################
+    allCombos = [None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None]
 
-negSamples = []
+    negSamples = []
 
-test1setSP2 = writeTest1data(testDir,"SP2",alphabet)
-test1PosSP2 = test1setSP2[0]
-test1NegSP2 = test1setSP2[1]
+    test1setSP2 = writeTest1data(testDir,"SP2",alphabet,x)
+    test1PosSP2 = test1setSP2[0]
+    test1NegSP2 = test1setSP2[1]
 
-test1setSP4 = writeTest1data(testDir,"SP4",alphabet)
-test1PosSP4 = test1setSP4[0]
-test1NegSP4 = test1setSP4[1]
+    test1setSP4 = writeTest1data(testDir,"SP4",alphabet,x)
+    test1PosSP4 = test1setSP4[0]
+    test1NegSP4 = test1setSP4[1]
 
-test1setSP8 = writeTest1data(testDir,"SP8",alphabet)
-test1PosSP8 = test1setSP8[0]
-test1NegSP8 = test1setSP8[1]
+    test1setSP8 = writeTest1data(testDir,"SP8",alphabet,x)
+    test1PosSP8 = test1setSP8[0]
+    test1NegSP8 = test1setSP8[1]
 
-#########################   TEST 2  ######################################
-
-test2setSP2 = writeTest2data(testDir,"SP2", alphabet)
-test2PosSP2 = test2setSP2[0]
-test2NegSP2 = test2setSP2[1]
-
-test2setSP4 = writeTest2data(testDir,"SP4", alphabet)
-test2PosSP4 = test2setSP4[0]
-test2NegSP4 = test2setSP4[1]
-
-test2setSP8 = writeTest2data(testDir,"SP8", alphabet)
-test2PosSP8 = test2setSP8[0]
-test2NegSP8 = test2setSP8[1]
+    #########################   TEST 2  ######################################
+    
+    test2setSP2 = writeTest2data(testDir,"SP2", alphabet,x)
+    test2PosSP2 = test2setSP2[0]
+    test2NegSP2 = test2setSP2[1]
+    
+    test2setSP4 = writeTest2data(testDir,"SP4", alphabet,x)
+    test2PosSP4 = test2setSP4[0]
+    test2NegSP4 = test2setSP4[1]
+    
+    test2setSP8 = writeTest2data(testDir,"SP8", alphabet,x)
+    test2PosSP8 = test2setSP8[0]
+    test2NegSP8 = test2setSP8[1]
