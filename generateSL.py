@@ -249,8 +249,8 @@ def writeTrainingData(trainDir,sl, alphabet, x):
     trainingNeg=[]
 
     if sl == "SL2":
-        #trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL2, 1, 25)
-        trainingPos=[]
+        trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL2, 1, 25)
+        #trainingPos=[]
         trainingNeg = generateSLNegative(alphabet, 1, 25, x, checkForbiddenSL2)
     elif sl =="SL4":
         trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL4, 1, 25)
@@ -483,8 +483,8 @@ def writeTest1data(testDir,sl,alphabet,x):
     if sl == "SL2":
         if len(alphabet) == 3:
             m = 10
-        #trainingPos = generateSLTest1(alphabet,trainingPosSL2, x, 'POS', checkForbiddenSL2,m)
-        trainingPos = []
+        trainingPos = generateSLTest1(alphabet,trainingPosSL2, x, 'POS', checkForbiddenSL2,m)
+        #trainingPos = []
         trainingNeg = generateSLTest1(alphabet,trainingNegSL2, x, 'NEG', checkForbiddenSL2,m)
     elif sl =="SL4":
         if len(alphabet) > 10:
@@ -521,8 +521,8 @@ def writeTest2data(testDir, sl,alphabet,x):
     trainingNeg=[]
 
     if sl == "SL2":
-        #trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL2, 26, 50)
-        trainingPos = []
+        trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL2, 26, 50)
+        #trainingPos = []
         trainingNeg = generateSLNegative(alphabet, 26, 50, x, checkForbiddenSL2)
     elif sl =="SL4":
         trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL4, 26, 50)
@@ -605,7 +605,7 @@ if __name__ == "__main__":
 ######################### CREATE TRAINING SETS ##########################
 #########################################################################
 
-sampleSizes = [2000]
+sampleSizes = [20]
 
 for x in sampleSizes:
 

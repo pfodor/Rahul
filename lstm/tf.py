@@ -24,7 +24,14 @@ import string
 def stringTranslation(s):
 
     d={}
-    x = string.ascii_lowercase+string.ascii_uppercase+'123456789'
+    #x = string.ascii_lowercase+string.ascii_uppercase+'123456789'
+    x=string.ascii_letters+string.digits
+    r=150-len(x)
+    point = 161
+    for j in range(r):
+        x+=chr(point)
+        point+=1
+
     i = 1
     
     for q in x:
@@ -284,6 +291,7 @@ def dynamicRNN(x, seqlen, weights, biases):
     # Start indices for each sample
     index = tf.range(0, batch_size) * seq_max_len + (seqlen - 1)
     # Indexing
+    
     outputs = tf.gather(tf.reshape(outputs, [-1, n_hidden]), index)
 
     # Linear activation, using outputs computed above
@@ -330,6 +338,7 @@ with tf.Session() as sess:
     test2_data = dataset.test2_data
     test2_label = dataset.test2_labels
     test2_seqlen = dataset.test2_seqlen
+
 
     print("*",sl, str(k_chunk)+'k')
     print("* Test1 Accuracy:", \

@@ -1,6 +1,6 @@
 from statistics import mean, stdev
-f = open('results.txt', 'r')
-w = open('results_w_average.txt' ,'w+')
+f = open('results_sp150_10k.txt', 'r')
+w = open('results_sp150_10k_w_average.txt' ,'w+')
 
 for l in f:
     if 'Test' in l:

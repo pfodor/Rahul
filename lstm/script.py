@@ -1,11 +1,13 @@
 import subprocess
 import sys
 
-directoriesSL = [['../sl_train3','../sl_test3','alphabet size : 3'],['../sl_train10','../sl_test10','alphabet size : 10'],['../sl_train56','../sl_test56', 'alphabet size : 56']]
-directoriesSP = [['../sp_train3','../sp_test3'],['../sp_train10','../sp_test10'],['../sp_train56','../sp_test56']]
+#directoriesSL = [['../sl_train3','../sl_test3','alphabet size : 3'],['../sl_train10','../sl_test10','alphabet size : 10'],['../sl_train56','../sl_test56', 'alphabet size : 56']]
+directoriesSL=[['../sl_train150','../sl_test150','alphabet size : 150']]
+#directoriesSP = [['../sp_train3','../sp_test3'],['../sp_train10','../sp_test10'],['../sp_train56','../sp_test56']]
+directoriesSP=[['../sp_train150','../sp_test150','alphabet size : 150']]
 SL = ['SL2','SL4','SL8']
 SP= ['SP2','SP4','SP8']
-k_chunks = ['1k']
+k_chunks = ['100k']
 vsize = [10,30,100]
 
 #p = subprocess.Popen('python3 tf.py SL8 1k 30 ../sl_train3 ../sl_test3', shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
@@ -14,14 +16,15 @@ vsize = [10,30,100]
 
 print('\n\n')
 
-for d in directoriesSL:
-    for sl in SL:
+for d in directoriesSP:
+    for sl in SP:
         for v in vsize:
             print('==========================================================')
             print('vector size : ', v)
             print(d[2])
             for k in k_chunks:
                 s = 'python3 tf.py '+sl+' '+k+' '+str(v)+' '+d[0]+' '+d[1]
+                #print(s)
                 print(sl, str(k))
 
                 test1 = []
