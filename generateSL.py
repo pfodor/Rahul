@@ -1,5 +1,6 @@
 
 
+
 import rstr
 from itertools import product
 import sys
@@ -141,13 +142,6 @@ def generateSL4_8Negative(alphabet, minWordLength, maxWordLength, sampleAmount, 
     # GENERATE POSITIVE SAMPLES
     negSamples = []
     samplePerLength = []
-    #regTemplate = ""
-    #if checkForbidden == checkForbiddenSL4:
-    #    regTemplate = '(bbb[alphabet]{})'+ '|' +'([alphabet]{}aaaa[alphabet]{})'+ '|' +'([alphabet]{}bbbb[alphabet]{})'+ '|' +'([alphabet]{}aaa)'
-    #if checkForbidden == checkForbiddenSL8:
-    #    regTemplate = '(bbbbbbb[alphabet]{})'+ '|' +'([alphabet]{}aaaaaaaa[alphabet]{})'+ '|' +'([alphabet]{}bbbbbbbb[alphabet]{})'+ '|' +'([alphabet]{}aaaaaaa)'
-    #regTemplate = regTemplate.replace('alphabet',alphabet)
-    #partitions=[]
     x = 0
     if testOrTrain == "train":
         while len(samplePerLength)<(sampleAmount*minWordLength):
@@ -171,13 +165,6 @@ def generateSL4_8Negative(alphabet, minWordLength, maxWordLength, sampleAmount, 
         partitions = []
         word=''
         if checkForbidden == checkForbiddenSL4:
-            #partitions += findPartition(1,x-3)
-            #partitions += findPartition(2,x-4)
-            #partitions += findPartition(2,x-4)
-            #partitions += findPartition(1,x-3)
-
-            #word = random.choice(sl4NegSamples[x])
-            #sl4NegSamples[x].remove(word)
             slLength = random.randint(3,4)
             length = x - slLength
             word = rstr.rstr(alphabet,length)
@@ -195,14 +182,6 @@ def generateSL4_8Negative(alphabet, minWordLength, maxWordLength, sampleAmount, 
                 
 
         if checkForbidden == checkForbiddenSL8:
-            #partitions += findPartition(1,x-7)
-            #partitions += findPartition(2,x-8)
-            #partitions += findPartition(2,x-8)
-            #partitions += findPartition(1,x-7)
-
-            #word = random.choice(sl8NegSamples[x])
-            #sl8NegSamples[x].remove(word)
-
             slLength = random.randint(7,8)
             length = x - slLength
             word = rstr.rstr(alphabet,length)
@@ -217,13 +196,6 @@ def generateSL4_8Negative(alphabet, minWordLength, maxWordLength, sampleAmount, 
                 r.append(word[0:rp]+'aaaaaaaa'+word[rp:])
                 r.append(word[0:rp]+'bbbbbbbb'+word[rp:])
                 word = random.choice(r)
-          
-        #regMod = regTemplate
-        #for e in partitions:
-        #    rep = "{"+str(e)+"}"
-        #    regMod=regMod.replace("{}",rep,1)
-        #word = rstr.xeger(regMod)
-        # check if word is forbidden
         forbidden = checkForbidden(word)
         if forbidden:
             samplePerLength.append(word)
@@ -250,7 +222,6 @@ def writeTrainingData(trainDir,sl, alphabet, x):
 
     if sl == "SL2":
         trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL2, 1, 25)
-        #trainingPos=[]
         trainingNeg = generateSLNegative(alphabet, 1, 25, x, checkForbiddenSL2)
     elif sl =="SL4":
         trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL4, 1, 25)
@@ -273,7 +244,6 @@ def writeTrainingData(trainDir,sl, alphabet, x):
 
 def generateSLTest1(alphabet, trainingSL, sampleAmount, posORneg, checkForbidden, m):
     samples=[]
-    #m = int(math.log(sampleAmount, len(alphabet))+4)
     print("generateSLTest1",posORneg, sampleAmount,checkForbidden)
     for t in range(1,m):
         print("generateSLTest1","--1--","t== ",t,"    ",m)
@@ -351,25 +321,29 @@ def generateSLTest1(alphabet, trainingSL, sampleAmount, posORneg, checkForbidden
                             print(num, len(collect))
                             collect = []
                             break
-                if not possible:
+                if not possible and t <=8:
                     break
                 print('t ==', t, 'possible ==', possible)
                 if t > 8:
                         #word = random.choice(sl8NegSamples[t])
-                        slLength = random.randint(3,4)
+                        slLength = random.randint(7,8)
                         length = t - slLength
                         word = rstr.rstr(alphabet,length)
-                        if slLength == 3:
+                        #print('length == ',length, 'word == ', word, 'word length == ',len(word))
+                        if slLength == 7:
                             r=[]
                             r.append('bbbbbbb'+word)
                             r.append(word+'aaaaaaa')
+                            #print(r)
                             word = random.choice(r)
-                        if slLength == 4:
+                        if slLength == 8:
                             r=[]
                             rp = random.randint(0,len(word))
                             r.append(word[0:rp]+'aaaaaaaa'+word[rp:])
                             r.append(word[0:rp]+'bbbbbbbb'+word[rp:])
+                            #print(r)
                             word = random.choice(r)
+                        #print(word, ' t == ', t)
                     #else:
                     #    word = random.choice(samplePerLength)
                     #sl8NegSamples[t].remove(word)
@@ -380,7 +354,7 @@ def generateSLTest1(alphabet, trainingSL, sampleAmount, posORneg, checkForbidden
                     found = True
                     print(word, len(word), len(samplePerLength), sampleAmount, posORneg, "generateSLTest1",checkForbidden)
             #else:
-                #print(word, posORneg, "generateSLTest1", checkForbidden, "didn't make it")
+                #print(word, posORneg, "generateSLTest1", checkForbidden, "didn't make it", 't==',t)
             collect.append(word)
         samples+=samplePerLength
 
@@ -390,21 +364,6 @@ def generateSLTest1(alphabet, trainingSL, sampleAmount, posORneg, checkForbidden
         word = rstr.rstr(alphabet, 25)
         # check if word is forbidden
         if (checkForbidden == checkForbiddenSL4) and (posORneg == 'NEG'):
-            #partitions = []
-            #regex = '(bbb[alphabet]{})'+ '|' +'([alphabet]{}aaaa[alphabet]{})'+ '|' +'([alphabet]{}bbbb[alphabet]{})'+ '|' +'([alphabet]{}aaa)'
-            #regex = regex.replace("alphabet", alphabet)
-            #partitions += findPartition(1,t-3)
-            #partitions += findPartition(2,t-4)
-            #partitions += findPartition(2,t-4)
-            #partitions += findPartition(1,t-3)
-            #for e in partitions:
-            #    rep = "{"+str(e)+"}"
-            #    regex=regex.replace("{}",rep,1)
-            #word = rstr.xeger(regex)
-            
-            #word = random.choice(sl4NegSamples[25])
-            #sl4NegSamples[25].remove(word)
-
             slLength = random.randint(3,4)
             length = 25 - slLength
             word = rstr.rstr(alphabet,length)
@@ -419,39 +378,21 @@ def generateSLTest1(alphabet, trainingSL, sampleAmount, posORneg, checkForbidden
                 r.append(word[0:rp]+'aaaa'+word[rp:])
                 r.append(word[0:rp]+'bbbb'+word[rp:])
                 word = random.choice(r)
-
         if (checkForbidden == checkForbiddenSL8) and (posORneg == 'NEG'):
-            #partitions = []
-            #regex = '(bbbbbbb[alphabet]{})'+ '|' +'([alphabet]{}aaaaaaaa[alphabet]{})'+ '|' +'([alphabet]{}bbbbbbbb[alphabet]{})'+ '|' +'([alphabet]{}aaaaaaa)'
-            #regex = regex.replace("alphabet", alphabet)
-            #partitions += findPartition(1,25-7)
-            #partitions += findPartition(2,25-8)
-            #partitions += findPartition(2,25-8)
-            #partitions += findPartition(1,25-7)
-            #for e in partitions:
-            #    rep = "{"+str(e)+"}"
-            #    regex=regex.replace("{}",rep,1)
-            #word = rstr.xeger(regex)
-            
-            #word = random.choice(sl8NegSamples[25])
-            #sl8NegSamples[25].remove(word)
-
-            slLength = random.randint(3,4)
+            slLength = random.randint(7,8)
             length = 25 - slLength
             word = rstr.rstr(alphabet,length)
-            if slLength == 3:
+            if slLength == 7:
                 r=[]
                 r.append('bbbbbbb'+word)
                 r.append(word+'aaaaaaa')
                 word = random.choice(r)
-            if slLength == 4:
+            if slLength == 8:
                 r=[]
                 rp = random.randint(0,len(word))
                 r.append(word[0:rp]+'aaaaaaaa'+word[rp:])
                 r.append(word[0:rp]+'bbbbbbbb'+word[rp:])
                 word = random.choice(r)
-
-
         forbidden = forbiddenChecker(word, posORneg, checkForbidden)
         if not forbidden:
             if word not in trainingSL:
@@ -476,21 +417,20 @@ def writeTest1data(testDir,sl,alphabet,x):
     trainingPos=[]
     trainingNeg=[]
     m = 0
-    if len(alphabet) <= 10:
-        m = 7
+    if len(alphabet) < 10:
+        m = 12
     else:
         m = 4
     if sl == "SL2":
         if len(alphabet) == 3:
-            m = 10
+            m = 12
         trainingPos = generateSLTest1(alphabet,trainingPosSL2, x, 'POS', checkForbiddenSL2,m)
-        #trainingPos = []
         trainingNeg = generateSLTest1(alphabet,trainingNegSL2, x, 'NEG', checkForbiddenSL2,m)
     elif sl =="SL4":
         if len(alphabet) > 10:
             m = 5
         if len(alphabet) == 3:
-            10
+            12
         trainingPos = generateSLTest1(alphabet,trainingPosSL4, x, 'POS', checkForbiddenSL4,m)
         trainingNeg = generateSLTest1(alphabet,trainingNegSL4, x, 'NEG', checkForbiddenSL4,m)
     else:
@@ -522,7 +462,6 @@ def writeTest2data(testDir, sl,alphabet,x):
 
     if sl == "SL2":
         trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL2, 26, 50)
-        #trainingPos = []
         trainingNeg = generateSLNegative(alphabet, 26, 50, x, checkForbiddenSL2)
     elif sl =="SL4":
         trainingPos = generateSLPositive(alphabet, x, checkForbiddenSL4, 26, 50)
@@ -542,53 +481,6 @@ def writeTest2data(testDir, sl,alphabet,x):
     f1.close()
     return (trainingPos, trainingNeg)
 
-
-def fillNegSamples(alphabet):
-    f=''
-    if len(alphabet) == 3:
-        f = open('./foma2_outputs/sl2negative_3.txt','r')
-    if len(alphabet) == 10:
-        f = open('./foma2_outputs/sl2negative_10.txt','r')
-    if len(alphabet) == 56:
-        f = open('./foma2_outputs/sl2negative_56.txt','r')
-    for l in f:
-        s = l[:-1]
-        if len(s) in sl2NegSamples:
-            sl2NegSamples[len(s)].append(s)
-        else:
-            sl2NegSamples[len(s)] = [s]
-        
-    f=''
-    if len(alphabet) == 3:
-        f = open('./foma2_outputs/sl4negative_3.txt','r')
-    if len(alphabet) == 10:
-        f = open('./foma2_outputs/sl4negative_10.txt','r')
-    if len(alphabet) == 56:
-        f = open('./foma2_outputs/sl4negative_56.txt','r')
-    for l in f:
-        s = l[:-1]
-        if len(s) in sl4NegSamples:
-            sl4NegSamples[len(s)].append(s)
-        else:
-            sl4NegSamples[len(s)] = [s]
-      
-    f=''
-    if len(alphabet) == 3:
-        f = open('./foma2_outputs/sl8negative_3.txt','r')
-    if len(alphabet) == 10:
-        f = open('./foma2_outputs/sl8negative_10.txt','r')
-    if len(alphabet) == 56:
-        f = open('./foma2_outputs/sl8negative_56.txt','r')        
-    for l in f:
-        s = l[:-1]
-        if len(s) in sl8NegSamples:
-            sl8NegSamples[len(s)].append(s)
-        else:
-            sl8NegSamples[len(s)] = [s]
-    for x in sl8NegSamples:
-        print(x, "    leng", len(sl8NegSamples[x]))
-        
-
 ##############################################################################
 ##############################################################################
 if __name__ == "__main__":
@@ -605,15 +497,9 @@ if __name__ == "__main__":
 ######################### CREATE TRAINING SETS ##########################
 #########################################################################
 
-sampleSizes = [20]
+sampleSizes = [20,200,2000]
 
 for x in sampleSizes:
-
-    #sl2NegSamples={}
-    #sl4NegSamples={}
-    #sl8NegSamples={}
-    #fillNegSamples(alphabet)
-
     i = x * 25 * 2
     i = int(i / 1000)
     trainDir = trainDirOrig
@@ -644,7 +530,7 @@ for x in sampleSizes:
 
     #########################   TEST 1  ######################################
     allCombos = [None,None,None,None,None,None,None,None,None,None,None,None,None,None]
-    
+     
     test1setSL2 = writeTest1data(testDir, "SL2",alphabet,x)
     test1PosSL2 = test1setSL2[0]
     test1NegSL2 = test1setSL2[1]
@@ -652,13 +538,13 @@ for x in sampleSizes:
     test1setSL4 = writeTest1data(testDir, "SL4",alphabet,x)
     test1PosSL4 = test1setSL4[0]
     test1NegSL4 = test1setSL4[1]
-    
+     
     test1setSL8 = writeTest1data(testDir, "SL8",alphabet,x)
     test1PosSL8 = test1setSL8[0]
     test1NegSL8 = test1setSL8[1]
 
     #########################   TEST 2  ######################################
-    
+        
     test2setSL2 = writeTest2data(testDir, "SL2", alphabet,x)
     test2PosSL2 = test2setSL2[0]
     test2NegSL2 = test2setSL2[1]
@@ -670,4 +556,4 @@ for x in sampleSizes:
     test2setSL8 = writeTest2data(testDir, "SL8", alphabet,x)
     test2PosSL8 = test2setSL8[0]
     test2NegSL8 = test2setSL8[1]
-    
+        

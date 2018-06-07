@@ -1,0 +1,5410 @@
+<IPython.core.display.Javascript at 0x7f9c686e7150>
+('SL2', '100k', 10)
+epoc: 00
+training: 0.8457
+te0: 0.8765
+te1: 0.8904
+te2: 0.8727
+
+epoc: 01
+training: 0.9899
+te0: 0.8835
+te1: 0.8972
+te2: 0.8904
+
+epoc: 02
+training: 0.9973
+te0: 0.8864
+te1: 0.8994
+te2: 0.8950
+
+epoc: 03
+training: 0.9984
+te0: 0.8865
+te1: 0.8994
+te2: 0.8953
+
+epoc: 04
+training: 0.9992
+te0: 0.8863
+te1: 0.8993
+te2: 0.8954
+
+epoc: 05
+training: 0.9994
+te0: 0.8866
+te1: 0.8995
+te2: 0.8956
+
+epoc: 06
+training: 0.9996
+te0: 0.8861
+te1: 0.8992
+te2: 0.8954
+
+epoc: 07
+training: 0.9998
+te0: 0.8842
+te1: 0.8968
+te2: 0.8934
+
+epoc: 08
+training: 0.9998
+te0: 0.8860
+te1: 0.8991
+te2: 0.8956
+
+epoc: 09
+training: 0.9998
+te0: 0.8858
+te1: 0.8990
+te2: 0.8953
+
+epoc: 10
+training: 0.9999
+te0: 0.8861
+te1: 0.8992
+te2: 0.8956
+
+epoc: 11
+training: 0.9998
+te0: 0.8897
+te1: 0.9031
+te2: 0.8994
+
+epoc: 12
+training: 0.9999
+te0: 0.8861
+te1: 0.8992
+te2: 0.8957
+
+epoc: 13
+training: 1.0000
+te0: 0.8863
+te1: 0.8994
+te2: 0.8958
+
+epoc: 14
+training: 0.9999
+te0: 0.8872
+te1: 0.9013
+te2: 0.8976
+
+epoc: 15
+training: 0.9999
+te0: 0.8860
+te1: 0.8992
+te2: 0.8957
+
+epoc: 16
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8958
+
+epoc: 17
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8958
+
+epoc: 18
+training: 1.0000
+te0: 0.8861
+te1: 0.8994
+te2: 0.8958
+
+epoc: 19
+training: 1.0000
+te0: 0.8863
+te1: 0.8995
+te2: 0.8959
+
+epoc: 20
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8958
+
+epoc: 21
+training: 1.0000
+te0: 0.8861
+te1: 0.8994
+te2: 0.8958
+
+epoc: 22
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8957
+
+epoc: 23
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8958
+
+epoc: 24
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8958
+
+epoc: 25
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8957
+
+epoc: 26
+training: 1.0000
+te0: 0.8861
+te1: 0.8992
+te2: 0.8957
+
+epoc: 27
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8957
+
+epoc: 28
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8957
+
+epoc: 29
+training: 1.0000
+te0: 0.8861
+te1: 0.8992
+te2: 0.8957
+
+epoc: 30
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 31
+training: 1.0000
+te0: 0.8861
+te1: 0.8995
+te2: 0.8959
+
+epoc: 32
+training: 1.0000
+te0: 0.8862
+te1: 0.8995
+te2: 0.8959
+
+epoc: 33
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8957
+
+epoc: 34
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8957
+
+epoc: 35
+training: 1.0000
+te0: 0.8861
+te1: 0.8992
+te2: 0.8957
+
+epoc: 36
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8957
+
+epoc: 37
+training: 1.0000
+te0: 0.8861
+te1: 0.8994
+te2: 0.8958
+
+epoc: 38
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8957
+
+epoc: 39
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 40
+training: 1.0000
+te0: 0.8859
+te1: 0.8992
+te2: 0.8955
+
+epoc: 41
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 42
+training: 1.0000
+te0: 0.8861
+te1: 0.8992
+te2: 0.8957
+
+epoc: 43
+training: 1.0000
+te0: 0.8861
+te1: 0.8994
+te2: 0.8958
+
+epoc: 44
+training: 1.0000
+te0: 0.8861
+te1: 0.8996
+te2: 0.8960
+
+epoc: 45
+training: 1.0000
+te0: 0.8861
+te1: 0.8994
+te2: 0.8959
+
+epoc: 46
+training: 1.0000
+te0: 0.8861
+te1: 0.8995
+te2: 0.8960
+
+epoc: 47
+training: 1.0000
+te0: 0.8861
+te1: 0.8994
+te2: 0.8959
+
+epoc: 48
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8957
+
+epoc: 49
+training: 1.0000
+te0: 0.8861
+te1: 0.8992
+te2: 0.8957
+
+epoc: 50
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 51
+training: 1.0000
+te0: 0.8861
+te1: 0.8993
+te2: 0.8958
+
+epoc: 52
+training: 1.0000
+te0: 0.8861
+te1: 0.8994
+te2: 0.8958
+
+epoc: 53
+training: 1.0000
+te0: 0.8861
+te1: 0.8995
+te2: 0.8959
+
+epoc: 54
+training: 1.0000
+te0: 0.8868
+te1: 0.9003
+te2: 0.8967
+
+epoc: 55
+training: 1.0000
+te0: 0.8861
+te1: 0.8995
+te2: 0.8959
+
+epoc: 56
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 57
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 58
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 59
+training: 1.0000
+te0: 0.8861
+te1: 0.8995
+te2: 0.8959
+
+epoc: 60
+training: 1.0000
+te0: 0.8861
+te1: 0.8994
+te2: 0.8958
+
+epoc: 61
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 62
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 63
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 64
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8957
+
+epoc: 65
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 66
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 67
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 68
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 69
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 70
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 71
+training: 1.0000
+te0: 0.8860
+te1: 0.8991
+te2: 0.8956
+
+epoc: 72
+training: 1.0000
+te0: 0.8860
+te1: 0.8991
+te2: 0.8956
+
+epoc: 73
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 74
+training: 1.0000
+te0: 0.8860
+te1: 0.8991
+te2: 0.8956
+
+epoc: 75
+training: 1.0000
+te0: 0.8860
+te1: 0.8991
+te2: 0.8956
+
+epoc: 76
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 77
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 78
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 79
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 80
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 81
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 82
+training: 1.0000
+te0: 0.8861
+te1: 0.8992
+te2: 0.8957
+
+epoc: 83
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 84
+training: 1.0000
+te0: 0.8860
+te1: 0.8991
+te2: 0.8955
+
+epoc: 85
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 86
+training: 1.0000
+te0: 0.8860
+te1: 0.8991
+te2: 0.8955
+
+epoc: 87
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 88
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 89
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 90
+training: 1.0000
+te0: 0.8860
+te1: 0.8991
+te2: 0.8956
+
+epoc: 91
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 92
+training: 1.0000
+te0: 0.8860
+te1: 0.8991
+te2: 0.8955
+
+epoc: 93
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 94
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 95
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 96
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 97
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 98
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+epoc: 99
+training: 1.0000
+te0: 0.8859
+te1: 0.8991
+te2: 0.8955
+
+('SL2', '100k', 30)
+epoc: 00
+training: 0.9362
+te0: 0.8865
+te1: 0.8998
+te2: 0.8943
+
+epoc: 01
+training: 0.9985
+te0: 0.8843
+te1: 0.8976
+te2: 0.8932
+
+epoc: 02
+training: 0.9995
+te0: 0.8849
+te1: 0.8981
+te2: 0.8929
+
+epoc: 03
+training: 0.9999
+te0: 0.8862
+te1: 0.8994
+te2: 0.8957
+
+epoc: 04
+training: 0.9999
+te0: 0.8906
+te1: 0.9045
+te2: 0.9005
+
+epoc: 05
+training: 0.9998
+te0: 0.8900
+te1: 0.9038
+te2: 0.8999
+
+epoc: 06
+training: 1.0000
+te0: 0.8890
+te1: 0.9022
+te2: 0.8986
+
+epoc: 07
+training: 1.0000
+te0: 0.8876
+te1: 0.9011
+te2: 0.8976
+
+epoc: 08
+training: 1.0000
+te0: 0.8873
+te1: 0.9010
+te2: 0.8974
+
+epoc: 09
+training: 1.0000
+te0: 0.8864
+te1: 0.8999
+te2: 0.8963
+
+epoc: 10
+training: 1.0000
+te0: 0.8866
+te1: 0.9002
+te2: 0.8964
+
+epoc: 11
+training: 1.0000
+te0: 0.8868
+te1: 0.9004
+te2: 0.8967
+
+epoc: 12
+training: 1.0000
+te0: 0.8868
+te1: 0.9005
+te2: 0.8970
+
+epoc: 13
+training: 1.0000
+te0: 0.8864
+te1: 0.8999
+te2: 0.8962
+
+epoc: 14
+training: 1.0000
+te0: 0.8864
+te1: 0.8998
+te2: 0.8961
+
+epoc: 15
+training: 1.0000
+te0: 0.8865
+te1: 0.9000
+te2: 0.8963
+
+epoc: 16
+training: 1.0000
+te0: 0.8867
+te1: 0.9003
+te2: 0.8966
+
+epoc: 17
+training: 1.0000
+te0: 0.8864
+te1: 0.8996
+te2: 0.8960
+
+epoc: 18
+training: 1.0000
+te0: 0.8866
+te1: 0.9002
+te2: 0.8965
+
+epoc: 19
+training: 1.0000
+te0: 0.8866
+te1: 0.9002
+te2: 0.8964
+
+epoc: 20
+training: 1.0000
+te0: 0.8871
+te1: 0.9009
+te2: 0.8972
+
+epoc: 21
+training: 1.0000
+te0: 0.8865
+te1: 0.9002
+te2: 0.8964
+
+epoc: 22
+training: 1.0000
+te0: 0.8871
+te1: 0.9009
+te2: 0.8973
+
+epoc: 23
+training: 1.0000
+te0: 0.8876
+te1: 0.9012
+te2: 0.8976
+
+epoc: 24
+training: 1.0000
+te0: 0.8872
+te1: 0.9012
+te2: 0.8975
+
+epoc: 25
+training: 0.9996
+te0: 0.8911
+te1: 0.9050
+te2: 0.9010
+
+epoc: 26
+training: 1.0000
+te0: 0.8872
+te1: 0.9006
+te2: 0.8969
+
+epoc: 27
+training: 1.0000
+te0: 0.8874
+te1: 0.9010
+te2: 0.8974
+
+epoc: 28
+training: 1.0000
+te0: 0.8876
+te1: 0.9015
+te2: 0.8978
+
+epoc: 29
+training: 1.0000
+te0: 0.8877
+te1: 0.9017
+te2: 0.8981
+
+epoc: 30
+training: 1.0000
+te0: 0.8882
+te1: 0.9019
+te2: 0.8982
+
+epoc: 31
+training: 1.0000
+te0: 0.8882
+te1: 0.9020
+te2: 0.8984
+
+epoc: 32
+training: 1.0000
+te0: 0.8885
+te1: 0.9022
+te2: 0.8985
+
+epoc: 33
+training: 1.0000
+te0: 0.8887
+te1: 0.9024
+te2: 0.8987
+
+epoc: 34
+training: 1.0000
+te0: 0.8887
+te1: 0.9026
+te2: 0.8988
+
+epoc: 35
+training: 1.0000
+te0: 0.8888
+te1: 0.9027
+te2: 0.8989
+
+epoc: 36
+training: 1.0000
+te0: 0.8889
+te1: 0.9029
+te2: 0.8992
+
+epoc: 37
+training: 1.0000
+te0: 0.8891
+te1: 0.9031
+te2: 0.8992
+
+epoc: 38
+training: 1.0000
+te0: 0.8890
+te1: 0.9030
+te2: 0.8992
+
+epoc: 39
+training: 1.0000
+te0: 0.8891
+te1: 0.9031
+te2: 0.8992
+
+epoc: 40
+training: 1.0000
+te0: 0.8892
+te1: 0.9032
+te2: 0.8993
+
+epoc: 41
+training: 1.0000
+te0: 0.8892
+te1: 0.9033
+te2: 0.8994
+
+epoc: 42
+training: 1.0000
+te0: 0.8895
+te1: 0.9034
+te2: 0.8996
+
+epoc: 43
+training: 1.0000
+te0: 0.8892
+te1: 0.9033
+te2: 0.8995
+
+epoc: 44
+training: 1.0000
+te0: 0.8895
+te1: 0.9034
+te2: 0.8996
+
+epoc: 45
+training: 1.0000
+te0: 0.8895
+te1: 0.9034
+te2: 0.8996
+
+epoc: 46
+training: 1.0000
+te0: 0.8895
+te1: 0.9034
+te2: 0.8996
+
+epoc: 47
+training: 1.0000
+te0: 0.8895
+te1: 0.9034
+te2: 0.8996
+
+epoc: 48
+training: 1.0000
+te0: 0.8895
+te1: 0.9033
+te2: 0.8996
+
+epoc: 49
+training: 1.0000
+te0: 0.8895
+te1: 0.9036
+te2: 0.8998
+
+epoc: 50
+training: 1.0000
+te0: 0.8895
+te1: 0.9035
+te2: 0.8997
+
+epoc: 51
+training: 1.0000
+te0: 0.8895
+te1: 0.9034
+te2: 0.8996
+
+epoc: 52
+training: 1.0000
+te0: 0.8899
+te1: 0.9039
+te2: 0.9000
+
+epoc: 53
+training: 1.0000
+te0: 0.8896
+te1: 0.9037
+te2: 0.9000
+
+epoc: 54
+training: 1.0000
+te0: 0.8896
+te1: 0.9037
+te2: 0.9000
+
+epoc: 55
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9001
+
+epoc: 56
+training: 1.0000
+te0: 0.8900
+te1: 0.9040
+te2: 0.9001
+
+epoc: 57
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9001
+
+epoc: 58
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 59
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 60
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 61
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 62
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 63
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 64
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 65
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 66
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 67
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 68
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 69
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 70
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 71
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 72
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 73
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 74
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 75
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 76
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 77
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 78
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 79
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 80
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 81
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 82
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 83
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 84
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 85
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 86
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 87
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 88
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 89
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 90
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 91
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 92
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 93
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 94
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 95
+training: 1.0000
+te0: 0.8901
+te1: 0.9040
+te2: 0.9002
+
+epoc: 96
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 97
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 98
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+epoc: 99
+training: 1.0000
+te0: 0.8901
+te1: 0.9041
+te2: 0.9002
+
+('SL2', '100k', 100)
+epoc: 00
+training: 0.9757
+te0: 0.8914
+te1: 0.9052
+te2: 0.9011
+
+epoc: 01
+training: 0.9997
+te0: 0.8862
+te1: 0.8999
+te2: 0.8960
+
+epoc: 02
+training: 1.0000
+te0: 0.8860
+te1: 0.8995
+te2: 0.8957
+
+epoc: 03
+training: 1.0000
+te0: 0.8860
+te1: 0.8993
+te2: 0.8957
+
+epoc: 04
+training: 1.0000
+te0: 0.8860
+te1: 0.8994
+te2: 0.8957
+
+epoc: 05
+training: 1.0000
+te0: 0.8860
+te1: 0.8993
+te2: 0.8956
+
+epoc: 06
+training: 1.0000
+te0: 0.8860
+te1: 0.8993
+te2: 0.8956
+
+epoc: 07
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 08
+training: 1.0000
+te0: 0.8860
+te1: 0.8993
+te2: 0.8956
+
+epoc: 09
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 10
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 11
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 12
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 13
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 14
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 15
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 16
+training: 1.0000
+te0: 0.8860
+te1: 0.8995
+te2: 0.8959
+
+epoc: 17
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 18
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 19
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 20
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 21
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8955
+
+epoc: 22
+training: 1.0000
+te0: 0.8860
+te1: 0.8993
+te2: 0.8957
+
+epoc: 23
+training: 1.0000
+te0: 0.8860
+te1: 0.8992
+te2: 0.8956
+
+epoc: 24
+training: 1.0000
+te0: 0.8860
+te1: 0.8995
+te2: 0.8959
+
+epoc: 25
+training: 1.0000
+te0: 0.8860
+te1: 0.8995
+te2: 0.8959
+
+epoc: 26
+training: 1.0000
+te0: 0.8864
+te1: 0.8999
+te2: 0.8963
+
+epoc: 27
+training: 1.0000
+te0: 0.8861
+te1: 0.8997
+te2: 0.8960
+
+epoc: 28
+training: 1.0000
+te0: 0.8860
+te1: 0.8995
+te2: 0.8958
+
+epoc: 29
+training: 1.0000
+te0: 0.8860
+te1: 0.8996
+te2: 0.8959
+
+epoc: 30
+training: 1.0000
+te0: 0.8860
+te1: 0.8995
+te2: 0.8959
+
+epoc: 31
+training: 1.0000
+te0: 0.8867
+te1: 0.9003
+te2: 0.8967
+
+epoc: 32
+training: 1.0000
+te0: 0.8864
+te1: 0.8999
+te2: 0.8964
+
+epoc: 33
+training: 1.0000
+te0: 0.8874
+te1: 0.9009
+te2: 0.8972
+
+epoc: 34
+training: 1.0000
+te0: 0.8869
+te1: 0.9005
+te2: 0.8968
+
+epoc: 35
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 36
+training: 1.0000
+te0: 0.8865
+te1: 0.9003
+te2: 0.8966
+
+epoc: 37
+training: 1.0000
+te0: 0.8865
+te1: 0.9002
+te2: 0.8965
+
+epoc: 38
+training: 1.0000
+te0: 0.8869
+te1: 0.9006
+te2: 0.8969
+
+epoc: 39
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 40
+training: 1.0000
+te0: 0.8863
+te1: 0.9000
+te2: 0.8964
+
+epoc: 41
+training: 1.0000
+te0: 0.8861
+te1: 0.8998
+te2: 0.8962
+
+epoc: 42
+training: 1.0000
+te0: 0.8861
+te1: 0.8998
+te2: 0.8962
+
+epoc: 43
+training: 1.0000
+te0: 0.8861
+te1: 0.8997
+te2: 0.8960
+
+epoc: 44
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 45
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 46
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 47
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 48
+training: 1.0000
+te0: 0.8861
+te1: 0.8998
+te2: 0.8962
+
+epoc: 49
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8962
+
+epoc: 50
+training: 1.0000
+te0: 0.8861
+te1: 0.8998
+te2: 0.8961
+
+epoc: 51
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 52
+training: 1.0000
+te0: 0.8861
+te1: 0.8998
+te2: 0.8962
+
+epoc: 53
+training: 1.0000
+te0: 0.8865
+te1: 0.9003
+te2: 0.8966
+
+epoc: 54
+training: 1.0000
+te0: 0.8865
+te1: 0.9002
+te2: 0.8966
+
+epoc: 55
+training: 1.0000
+te0: 0.8863
+te1: 0.9001
+te2: 0.8965
+
+epoc: 56
+training: 1.0000
+te0: 0.8863
+te1: 0.9000
+te2: 0.8964
+
+epoc: 57
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 58
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 59
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 60
+training: 1.0000
+te0: 0.8865
+te1: 0.9001
+te2: 0.8965
+
+epoc: 61
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 62
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 63
+training: 1.0000
+te0: 0.8865
+te1: 0.9002
+te2: 0.8965
+
+epoc: 64
+training: 1.0000
+te0: 0.8865
+te1: 0.9001
+te2: 0.8965
+
+epoc: 65
+training: 1.0000
+te0: 0.8865
+te1: 0.9002
+te2: 0.8965
+
+epoc: 66
+training: 1.0000
+te0: 0.8862
+te1: 0.9000
+te2: 0.8964
+
+epoc: 67
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 68
+training: 1.0000
+te0: 0.8864
+te1: 0.9001
+te2: 0.8965
+
+epoc: 69
+training: 1.0000
+te0: 0.8862
+te1: 0.9000
+te2: 0.8964
+
+epoc: 70
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 71
+training: 1.0000
+te0: 0.8863
+te1: 0.9001
+te2: 0.8965
+
+epoc: 72
+training: 1.0000
+te0: 0.8865
+te1: 0.9002
+te2: 0.8965
+
+epoc: 73
+training: 1.0000
+te0: 0.8865
+te1: 0.9003
+te2: 0.8966
+
+epoc: 74
+training: 1.0000
+te0: 0.8865
+te1: 0.9003
+te2: 0.8966
+
+epoc: 75
+training: 1.0000
+te0: 0.8863
+te1: 0.9001
+te2: 0.8965
+
+epoc: 76
+training: 1.0000
+te0: 0.8862
+te1: 0.9000
+te2: 0.8964
+
+epoc: 77
+training: 1.0000
+te0: 0.8862
+te1: 0.9000
+te2: 0.8964
+
+epoc: 78
+training: 1.0000
+te0: 0.8863
+te1: 0.9001
+te2: 0.8964
+
+epoc: 79
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 80
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 81
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 82
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 83
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 84
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 85
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 86
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 87
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 88
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 89
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 90
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 91
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8963
+
+epoc: 92
+training: 1.0000
+te0: 0.8862
+te1: 0.9000
+te2: 0.8964
+
+epoc: 93
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 94
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 95
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 96
+training: 1.0000
+te0: 0.8862
+te1: 0.8999
+te2: 0.8964
+
+epoc: 97
+training: 1.0000
+te0: 0.8862
+te1: 0.9001
+te2: 0.8964
+
+epoc: 98
+training: 1.0000
+te0: 0.8863
+te1: 0.9001
+te2: 0.8964
+
+epoc: 99
+training: 1.0000
+te0: 0.8862
+te1: 0.9000
+te2: 0.8964
+
+('SL2', '10k', 10)
+epoc: 00
+training: 0.4695
+te0: 0.5456
+te1: 0.5582
+te2: 0.5107
+
+epoc: 01
+training: 0.5784
+te0: 0.6467
+te1: 0.6655
+te2: 0.5875
+
+epoc: 02
+training: 0.6529
+te0: 0.7618
+te1: 0.7355
+te2: 0.6276
+
+epoc: 03
+training: 0.7452
+te0: 0.7308
+te1: 0.7169
+te2: 0.6774
+
+epoc: 04
+training: 0.8319
+te0: 0.7677
+te1: 0.7616
+te2: 0.7179
+
+epoc: 05
+training: 0.8853
+te0: 0.8039
+te1: 0.8099
+te2: 0.7633
+
+epoc: 06
+training: 0.9210
+te0: 0.8661
+te1: 0.8594
+te2: 0.8219
+
+epoc: 07
+training: 0.9450
+te0: 0.8676
+te1: 0.8643
+te2: 0.8306
+
+epoc: 08
+training: 0.9593
+te0: 0.8839
+te1: 0.8753
+te2: 0.8538
+
+epoc: 09
+training: 0.9649
+te0: 0.8888
+te1: 0.8771
+te2: 0.8570
+
+epoc: 10
+training: 0.9729
+te0: 0.8869
+te1: 0.8805
+te2: 0.8658
+
+epoc: 11
+training: 0.9752
+te0: 0.8878
+te1: 0.8788
+te2: 0.8646
+
+epoc: 12
+training: 0.9788
+te0: 0.8888
+te1: 0.8784
+te2: 0.8624
+
+epoc: 13
+training: 0.9783
+te0: 0.8898
+te1: 0.8844
+te2: 0.8755
+
+epoc: 14
+training: 0.9833
+te0: 0.8898
+te1: 0.8835
+te2: 0.8765
+
+epoc: 15
+training: 0.9845
+te0: 0.8908
+te1: 0.8847
+te2: 0.8798
+
+epoc: 16
+training: 0.9868
+te0: 0.8878
+te1: 0.8843
+te2: 0.8789
+
+epoc: 17
+training: 0.9867
+te0: 0.8908
+te1: 0.8880
+te2: 0.8837
+
+epoc: 18
+training: 0.9901
+te0: 0.8908
+te1: 0.8874
+te2: 0.8840
+
+epoc: 19
+training: 0.9907
+te0: 0.8898
+te1: 0.8867
+te2: 0.8854
+
+epoc: 20
+training: 0.9919
+te0: 0.8888
+te1: 0.8853
+te2: 0.8858
+
+epoc: 21
+training: 0.9927
+te0: 0.8878
+te1: 0.8834
+te2: 0.8833
+
+epoc: 22
+training: 0.9944
+te0: 0.8937
+te1: 0.8880
+te2: 0.8890
+
+epoc: 23
+training: 0.9944
+te0: 0.8888
+te1: 0.8861
+te2: 0.8889
+
+epoc: 24
+training: 0.9949
+te0: 0.8908
+te1: 0.8871
+te2: 0.8899
+
+epoc: 25
+training: 0.9963
+te0: 0.8918
+te1: 0.8880
+te2: 0.8912
+
+epoc: 26
+training: 0.9967
+te0: 0.8927
+te1: 0.8883
+te2: 0.8918
+
+epoc: 27
+training: 0.9968
+te0: 0.8937
+te1: 0.8886
+te2: 0.8916
+
+epoc: 28
+training: 0.9976
+te0: 0.8898
+te1: 0.8879
+te2: 0.8907
+
+epoc: 29
+training: 0.9978
+te0: 0.8918
+te1: 0.8883
+te2: 0.8914
+
+epoc: 30
+training: 0.9975
+te0: 0.8937
+te1: 0.8886
+te2: 0.8921
+
+epoc: 31
+training: 0.9986
+te0: 0.8927
+te1: 0.8896
+te2: 0.8931
+
+epoc: 32
+training: 0.9981
+te0: 0.8918
+te1: 0.8877
+te2: 0.8916
+
+epoc: 33
+training: 0.9984
+te0: 0.8927
+te1: 0.8887
+te2: 0.8930
+
+epoc: 34
+training: 0.9984
+te0: 0.8947
+te1: 0.8878
+te2: 0.8924
+
+epoc: 35
+training: 0.9991
+te0: 0.8957
+te1: 0.8893
+te2: 0.8931
+
+epoc: 36
+training: 0.9991
+te0: 0.8966
+te1: 0.8894
+te2: 0.8927
+
+epoc: 37
+training: 0.9984
+te0: 0.8966
+te1: 0.8888
+te2: 0.8926
+
+epoc: 38
+training: 0.9992
+te0: 0.8966
+te1: 0.8888
+te2: 0.8927
+
+epoc: 39
+training: 0.9987
+te0: 0.8966
+te1: 0.8894
+te2: 0.8931
+
+epoc: 40
+training: 0.9994
+te0: 0.8966
+te1: 0.8893
+te2: 0.8931
+
+epoc: 41
+training: 0.9995
+te0: 0.8966
+te1: 0.8897
+te2: 0.8933
+
+epoc: 42
+training: 0.9995
+te0: 0.8935
+te1: 0.8883
+te2: 0.8925
+
+epoc: 43
+training: 0.9994
+te0: 0.8945
+te1: 0.8889
+te2: 0.8929
+
+epoc: 44
+training: 0.9998
+te0: 0.8945
+te1: 0.8889
+te2: 0.8929
+
+epoc: 45
+training: 0.9996
+te0: 0.8935
+te1: 0.8887
+te2: 0.8928
+
+epoc: 46
+training: 0.9997
+te0: 0.8935
+te1: 0.8885
+te2: 0.8926
+
+epoc: 47
+training: 0.9998
+te0: 0.8935
+te1: 0.8887
+te2: 0.8928
+
+epoc: 48
+training: 0.9997
+te0: 0.8945
+te1: 0.8893
+te2: 0.8934
+
+epoc: 49
+training: 0.9998
+te0: 0.8945
+te1: 0.8890
+te2: 0.8934
+
+epoc: 50
+training: 0.9998
+te0: 0.8945
+te1: 0.8892
+te2: 0.8935
+
+epoc: 51
+training: 0.9997
+te0: 0.8935
+te1: 0.8885
+te2: 0.8933
+
+epoc: 52
+training: 0.9998
+te0: 0.8935
+te1: 0.8886
+te2: 0.8933
+
+epoc: 53
+training: 0.9999
+te0: 0.8954
+te1: 0.8898
+te2: 0.8938
+
+epoc: 54
+training: 0.9999
+te0: 0.8945
+te1: 0.8891
+te2: 0.8932
+
+epoc: 55
+training: 0.9998
+te0: 0.8945
+te1: 0.8888
+te2: 0.8932
+
+epoc: 56
+training: 0.9997
+te0: 0.8966
+te1: 0.8898
+te2: 0.8941
+
+epoc: 57
+training: 0.9993
+te0: 0.8966
+te1: 0.8929
+te2: 0.8969
+
+epoc: 58
+training: 0.9998
+te0: 0.8945
+te1: 0.8894
+te2: 0.8938
+
+epoc: 59
+training: 0.9999
+te0: 0.8945
+te1: 0.8893
+te2: 0.8937
+
+epoc: 60
+training: 0.9995
+te0: 0.8966
+te1: 0.8933
+te2: 0.8972
+
+epoc: 61
+training: 0.9997
+te0: 0.8945
+te1: 0.8910
+te2: 0.8954
+
+epoc: 62
+training: 0.9999
+te0: 0.8945
+te1: 0.8902
+te2: 0.8950
+
+epoc: 63
+training: 0.9999
+te0: 0.8945
+te1: 0.8898
+te2: 0.8945
+
+epoc: 64
+training: 1.0000
+te0: 0.8945
+te1: 0.8900
+te2: 0.8946
+
+epoc: 65
+training: 1.0000
+te0: 0.8945
+te1: 0.8897
+te2: 0.8942
+
+epoc: 66
+training: 1.0000
+te0: 0.8945
+te1: 0.8897
+te2: 0.8941
+
+epoc: 67
+training: 1.0000
+te0: 0.8945
+te1: 0.8895
+te2: 0.8940
+
+epoc: 68
+training: 1.0000
+te0: 0.8945
+te1: 0.8896
+te2: 0.8940
+
+epoc: 69
+training: 1.0000
+te0: 0.8945
+te1: 0.8896
+te2: 0.8941
+
+epoc: 70
+training: 1.0000
+te0: 0.8945
+te1: 0.8896
+te2: 0.8942
+
+epoc: 71
+training: 1.0000
+te0: 0.8945
+te1: 0.8894
+te2: 0.8941
+
+epoc: 72
+training: 1.0000
+te0: 0.8945
+te1: 0.8893
+te2: 0.8940
+
+epoc: 73
+training: 1.0000
+te0: 0.8945
+te1: 0.8893
+te2: 0.8941
+
+epoc: 74
+training: 1.0000
+te0: 0.8945
+te1: 0.8892
+te2: 0.8939
+
+epoc: 75
+training: 1.0000
+te0: 0.8945
+te1: 0.8894
+te2: 0.8941
+
+epoc: 76
+training: 1.0000
+te0: 0.8945
+te1: 0.8894
+te2: 0.8940
+
+epoc: 77
+training: 1.0000
+te0: 0.8945
+te1: 0.8894
+te2: 0.8942
+
+epoc: 78
+training: 1.0000
+te0: 0.8935
+te1: 0.8891
+te2: 0.8937
+
+epoc: 79
+training: 1.0000
+te0: 0.8945
+te1: 0.8893
+te2: 0.8941
+
+epoc: 80
+training: 1.0000
+te0: 0.8945
+te1: 0.8894
+te2: 0.8939
+
+epoc: 81
+training: 0.9998
+te0: 0.8954
+te1: 0.8895
+te2: 0.8942
+
+epoc: 82
+training: 1.0000
+te0: 0.8954
+te1: 0.8893
+te2: 0.8941
+
+epoc: 83
+training: 1.0000
+te0: 0.8954
+te1: 0.8896
+te2: 0.8943
+
+epoc: 84
+training: 1.0000
+te0: 0.8954
+te1: 0.8897
+te2: 0.8945
+
+epoc: 85
+training: 1.0000
+te0: 0.8954
+te1: 0.8897
+te2: 0.8946
+
+epoc: 86
+training: 1.0000
+te0: 0.8954
+te1: 0.8896
+te2: 0.8945
+
+epoc: 87
+training: 1.0000
+te0: 0.8954
+te1: 0.8896
+te2: 0.8944
+
+epoc: 88
+training: 1.0000
+te0: 0.8954
+te1: 0.8896
+te2: 0.8946
+
+epoc: 89
+training: 0.9996
+te0: 0.8925
+te1: 0.8874
+te2: 0.8918
+
+epoc: 90
+training: 0.9998
+te0: 0.8986
+te1: 0.8931
+te2: 0.8978
+
+epoc: 91
+training: 1.0000
+te0: 0.8966
+te1: 0.8926
+te2: 0.8970
+
+epoc: 92
+training: 1.0000
+te0: 0.8966
+te1: 0.8923
+te2: 0.8966
+
+epoc: 93
+training: 1.0000
+te0: 0.8966
+te1: 0.8919
+te2: 0.8964
+
+epoc: 94
+training: 1.0000
+te0: 0.8966
+te1: 0.8916
+te2: 0.8961
+
+epoc: 95
+training: 1.0000
+te0: 0.8966
+te1: 0.8916
+te2: 0.8961
+
+epoc: 96
+training: 1.0000
+te0: 0.8966
+te1: 0.8916
+te2: 0.8961
+
+epoc: 97
+training: 1.0000
+te0: 0.8966
+te1: 0.8916
+te2: 0.8960
+
+epoc: 98
+training: 1.0000
+te0: 0.8966
+te1: 0.8916
+te2: 0.8960
+
+epoc: 99
+training: 1.0000
+te0: 0.8966
+te1: 0.8916
+te2: 0.8959
+
+('SL2', '10k', 30)
+epoc: 00
+training: 0.6367
+te0: 0.8315
+te1: 0.8182
+te2: 0.7140
+
+epoc: 01
+training: 0.9042
+te0: 0.8309
+te1: 0.8475
+te2: 0.7890
+
+epoc: 02
+training: 0.9650
+te0: 0.8844
+te1: 0.8882
+te2: 0.8747
+
+epoc: 03
+training: 0.9802
+te0: 0.8849
+te1: 0.8874
+te2: 0.8763
+
+epoc: 04
+training: 0.9863
+te0: 0.8908
+te1: 0.8935
+te2: 0.8881
+
+epoc: 05
+training: 0.9914
+te0: 0.8918
+te1: 0.8911
+te2: 0.8882
+
+epoc: 06
+training: 0.9928
+te0: 0.8927
+te1: 0.8919
+te2: 0.8913
+
+epoc: 07
+training: 0.9946
+te0: 0.8937
+te1: 0.8925
+te2: 0.8914
+
+epoc: 08
+training: 0.9966
+te0: 0.8937
+te1: 0.8928
+te2: 0.8914
+
+epoc: 09
+training: 0.9965
+te0: 0.8947
+te1: 0.8937
+te2: 0.8934
+
+epoc: 10
+training: 0.9972
+te0: 0.8957
+te1: 0.8928
+te2: 0.8942
+
+epoc: 11
+training: 0.9981
+te0: 0.8947
+te1: 0.8933
+te2: 0.8963
+
+epoc: 12
+training: 0.9986
+te0: 0.8947
+te1: 0.8931
+te2: 0.8975
+
+epoc: 13
+training: 0.9991
+te0: 0.8957
+te1: 0.8954
+te2: 0.8986
+
+epoc: 14
+training: 0.9993
+te0: 0.8957
+te1: 0.8932
+te2: 0.8971
+
+epoc: 15
+training: 0.9996
+te0: 0.8957
+te1: 0.8935
+te2: 0.8975
+
+epoc: 16
+training: 0.9996
+te0: 0.8957
+te1: 0.8937
+te2: 0.8980
+
+epoc: 17
+training: 0.9995
+te0: 0.8945
+te1: 0.8919
+te2: 0.8958
+
+epoc: 18
+training: 0.9997
+te0: 0.8945
+te1: 0.8924
+te2: 0.8964
+
+epoc: 19
+training: 0.9996
+te0: 0.8945
+te1: 0.8929
+te2: 0.8965
+
+epoc: 20
+training: 0.9994
+te0: 0.8945
+te1: 0.8933
+te2: 0.8967
+
+epoc: 21
+training: 0.9999
+te0: 0.8957
+te1: 0.8944
+te2: 0.8993
+
+epoc: 22
+training: 0.9999
+te0: 0.8945
+te1: 0.8944
+te2: 0.8989
+
+epoc: 23
+training: 0.9999
+te0: 0.8957
+te1: 0.8947
+te2: 0.8994
+
+epoc: 24
+training: 1.0000
+te0: 0.8969
+te1: 0.8953
+te2: 0.8993
+
+epoc: 25
+training: 1.0000
+te0: 0.8945
+te1: 0.8946
+te2: 0.8995
+
+epoc: 26
+training: 0.9999
+te0: 0.8978
+te1: 0.8951
+te2: 0.8989
+
+epoc: 27
+training: 0.9995
+te0: 0.8923
+te1: 0.8875
+te2: 0.8901
+
+epoc: 28
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 29
+training: 1.0000
+te0: 0.8945
+te1: 0.8942
+te2: 0.8988
+
+epoc: 30
+training: 1.0000
+te0: 0.8945
+te1: 0.8942
+te2: 0.8989
+
+epoc: 31
+training: 1.0000
+te0: 0.8945
+te1: 0.8940
+te2: 0.8989
+
+epoc: 32
+training: 1.0000
+te0: 0.8945
+te1: 0.8939
+te2: 0.8988
+
+epoc: 33
+training: 1.0000
+te0: 0.8945
+te1: 0.8939
+te2: 0.8988
+
+epoc: 34
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 35
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 36
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 37
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 38
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8988
+
+epoc: 39
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 40
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 41
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 42
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8990
+
+epoc: 43
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 44
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 45
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 46
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 47
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 48
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8989
+
+epoc: 49
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 50
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 51
+training: 1.0000
+te0: 0.8945
+te1: 0.8939
+te2: 0.8987
+
+epoc: 52
+training: 1.0000
+te0: 0.8945
+te1: 0.8939
+te2: 0.8987
+
+epoc: 53
+training: 1.0000
+te0: 0.8945
+te1: 0.8939
+te2: 0.8987
+
+epoc: 54
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8986
+
+epoc: 55
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8986
+
+epoc: 56
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8986
+
+epoc: 57
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 58
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 59
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 60
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 61
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 62
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 63
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 64
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 65
+training: 1.0000
+te0: 0.8945
+te1: 0.8938
+te2: 0.8987
+
+epoc: 66
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8987
+
+epoc: 67
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8984
+
+epoc: 68
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8985
+
+epoc: 69
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8986
+
+epoc: 70
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8984
+
+epoc: 71
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8984
+
+epoc: 72
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8985
+
+epoc: 73
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8983
+
+epoc: 74
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8983
+
+epoc: 75
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8983
+
+epoc: 76
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8981
+
+epoc: 77
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8982
+
+epoc: 78
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8982
+
+epoc: 79
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8982
+
+epoc: 80
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8981
+
+epoc: 81
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8981
+
+epoc: 82
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8981
+
+epoc: 83
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8981
+
+epoc: 84
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8981
+
+epoc: 85
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8982
+
+epoc: 86
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8982
+
+epoc: 87
+training: 1.0000
+te0: 0.8945
+te1: 0.8937
+te2: 0.8981
+
+epoc: 88
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 89
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 90
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 91
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8982
+
+epoc: 92
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 93
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 94
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 95
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 96
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 97
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 98
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+epoc: 99
+training: 1.0000
+te0: 0.8945
+te1: 0.8936
+te2: 0.8981
+
+('SL2', '10k', 100)
+epoc: 00
+training: 0.8050
+te0: 0.8806
+te1: 0.8780
+te2: 0.8145
+
+epoc: 01
+training: 0.9743
+te0: 0.8973
+te1: 0.8977
+te2: 0.8949
+
+epoc: 02
+training: 0.9917
+te0: 0.8927
+te1: 0.8881
+te2: 0.8787
+
+epoc: 03
+training: 0.9951
+te0: 0.8990
+te1: 0.8996
+te2: 0.9018
+
+epoc: 04
+training: 0.9973
+te0: 0.8978
+te1: 0.8974
+te2: 0.9008
+
+epoc: 05
+training: 0.9994
+te0: 0.8969
+te1: 0.8988
+te2: 0.9021
+
+epoc: 06
+training: 0.9995
+te0: 0.8966
+te1: 0.8955
+te2: 0.8996
+
+epoc: 07
+training: 0.9996
+te0: 0.8990
+te1: 0.8999
+te2: 0.9044
+
+epoc: 08
+training: 0.9998
+te0: 0.8966
+te1: 0.8960
+te2: 0.9007
+
+epoc: 09
+training: 1.0000
+te0: 0.8976
+te1: 0.8959
+te2: 0.9007
+
+epoc: 10
+training: 1.0000
+te0: 0.8976
+te1: 0.8959
+te2: 0.9008
+
+epoc: 11
+training: 1.0000
+te0: 0.8976
+te1: 0.8958
+te2: 0.9008
+
+epoc: 12
+training: 1.0000
+te0: 0.8966
+te1: 0.8959
+te2: 0.9007
+
+epoc: 13
+training: 1.0000
+te0: 0.8976
+te1: 0.8959
+te2: 0.9006
+
+epoc: 14
+training: 1.0000
+te0: 0.8957
+te1: 0.8956
+te2: 0.9005
+
+epoc: 15
+training: 1.0000
+te0: 0.8976
+te1: 0.8958
+te2: 0.9007
+
+epoc: 16
+training: 1.0000
+te0: 0.8957
+te1: 0.8956
+te2: 0.9006
+
+epoc: 17
+training: 1.0000
+te0: 0.8957
+te1: 0.8955
+te2: 0.9004
+
+epoc: 18
+training: 1.0000
+te0: 0.8957
+te1: 0.8955
+te2: 0.9005
+
+epoc: 19
+training: 1.0000
+te0: 0.8945
+te1: 0.8956
+te2: 0.9004
+
+epoc: 20
+training: 1.0000
+te0: 0.8945
+te1: 0.8956
+te2: 0.9004
+
+epoc: 21
+training: 1.0000
+te0: 0.8945
+te1: 0.8956
+te2: 0.9004
+
+epoc: 22
+training: 1.0000
+te0: 0.8945
+te1: 0.8955
+te2: 0.9003
+
+epoc: 23
+training: 1.0000
+te0: 0.8945
+te1: 0.8953
+te2: 0.9002
+
+epoc: 24
+training: 1.0000
+te0: 0.8945
+te1: 0.8954
+te2: 0.9003
+
+epoc: 25
+training: 1.0000
+te0: 0.8945
+te1: 0.8953
+te2: 0.9002
+
+epoc: 26
+training: 1.0000
+te0: 0.8945
+te1: 0.8954
+te2: 0.9003
+
+epoc: 27
+training: 1.0000
+te0: 0.8945
+te1: 0.8951
+te2: 0.9001
+
+epoc: 28
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8999
+
+epoc: 29
+training: 1.0000
+te0: 0.8945
+te1: 0.8952
+te2: 0.9003
+
+epoc: 30
+training: 1.0000
+te0: 0.8945
+te1: 0.8950
+te2: 0.9000
+
+epoc: 31
+training: 1.0000
+te0: 0.8945
+te1: 0.8951
+te2: 0.9003
+
+epoc: 32
+training: 1.0000
+te0: 0.8945
+te1: 0.8950
+te2: 0.9002
+
+epoc: 33
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8999
+
+epoc: 34
+training: 1.0000
+te0: 0.8945
+te1: 0.8950
+te2: 0.9002
+
+epoc: 35
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.9000
+
+epoc: 36
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8999
+
+epoc: 37
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8999
+
+epoc: 38
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8999
+
+epoc: 39
+training: 1.0000
+te0: 0.8945
+te1: 0.8950
+te2: 0.8999
+
+epoc: 40
+training: 1.0000
+te0: 0.8945
+te1: 0.8950
+te2: 0.8999
+
+epoc: 41
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8999
+
+epoc: 42
+training: 1.0000
+te0: 0.8945
+te1: 0.8950
+te2: 0.9000
+
+epoc: 43
+training: 1.0000
+te0: 0.8945
+te1: 0.8947
+te2: 0.8998
+
+epoc: 44
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 45
+training: 1.0000
+te0: 0.8945
+te1: 0.8950
+te2: 0.8998
+
+epoc: 46
+training: 1.0000
+te0: 0.8945
+te1: 0.8950
+te2: 0.8998
+
+epoc: 47
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 48
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 49
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 50
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 51
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 52
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 53
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 54
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8997
+
+epoc: 55
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 56
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 57
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8997
+
+epoc: 58
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8998
+
+epoc: 59
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 60
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 61
+training: 1.0000
+te0: 0.8945
+te1: 0.8949
+te2: 0.8997
+
+epoc: 62
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 63
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 64
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 65
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 66
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 67
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 68
+training: 1.0000
+te0: 0.8945
+te1: 0.8946
+te2: 0.8994
+
+epoc: 69
+training: 1.0000
+te0: 0.8945
+te1: 0.8947
+te2: 0.8997
+
+epoc: 70
+training: 1.0000
+te0: 0.8945
+te1: 0.8947
+te2: 0.8997
+
+epoc: 71
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 72
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 73
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 74
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 75
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 76
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 77
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 78
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 79
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 80
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 81
+training: 1.0000
+te0: 0.8945
+te1: 0.8947
+te2: 0.8996
+
+epoc: 82
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 83
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 84
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8998
+
+epoc: 85
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 86
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 87
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 88
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 89
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 90
+training: 1.0000
+te0: 0.8945
+te1: 0.8947
+te2: 0.8994
+
+epoc: 91
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8997
+
+epoc: 92
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 93
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 94
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 95
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 96
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 97
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 98
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+epoc: 99
+training: 1.0000
+te0: 0.8945
+te1: 0.8948
+te2: 0.8996
+
+('SL2', '1k', 10)
+epoc: 00
+training: 0.4766
+te0: 0.4800
+te1: 0.4425
+te2: 0.4862
+
+epoc: 01
+training: 0.5583
+te0: 0.5200
+te1: 0.4680
+te2: 0.4942
+
+epoc: 02
+training: 0.6174
+te0: 0.5800
+te1: 0.4955
+te2: 0.5047
+
+epoc: 03
+training: 0.5326
+te0: 0.6000
+te1: 0.5113
+te2: 0.5269
+
+epoc: 04
+training: 0.6036
+te0: 0.6100
+te1: 0.5298
+te2: 0.5372
+
+epoc: 05
+training: 0.6172
+te0: 0.6000
+te1: 0.5435
+te2: 0.5462
+
+epoc: 06
+training: 0.5856
+te0: 0.6200
+te1: 0.5578
+te2: 0.5597
+
+epoc: 07
+training: 0.6465
+te0: 0.6200
+te1: 0.5828
+te2: 0.5744
+
+epoc: 08
+training: 0.6620
+te0: 0.6300
+te1: 0.5952
+te2: 0.6001
+
+epoc: 09
+training: 0.6207
+te0: 0.6400
+te1: 0.6034
+te2: 0.6084
+
+epoc: 10
+training: 0.6279
+te0: 0.6500
+te1: 0.6161
+te2: 0.6123
+
+epoc: 11
+training: 0.6305
+te0: 0.6700
+te1: 0.6237
+te2: 0.6128
+
+epoc: 12
+training: 0.5930
+te0: 0.6700
+te1: 0.6366
+te2: 0.6126
+
+epoc: 13
+training: 0.7367
+te0: 0.6700
+te1: 0.6359
+te2: 0.6107
+
+epoc: 14
+training: 0.6974
+te0: 0.6800
+te1: 0.6457
+te2: 0.6073
+
+epoc: 15
+training: 0.7046
+te0: 0.6800
+te1: 0.6540
+te2: 0.6056
+
+epoc: 16
+training: 0.7137
+te0: 0.7100
+te1: 0.6569
+te2: 0.6076
+
+epoc: 17
+training: 0.6684
+te0: 0.7400
+te1: 0.6765
+te2: 0.6094
+
+epoc: 18
+training: 0.7225
+te0: 0.7500
+te1: 0.6794
+te2: 0.6131
+
+epoc: 19
+training: 0.7219
+te0: 0.7500
+te1: 0.6823
+te2: 0.6104
+
+epoc: 20
+training: 0.7259
+te0: 0.7400
+te1: 0.6823
+te2: 0.6128
+
+epoc: 21
+training: 0.7247
+te0: 0.7900
+te1: 0.6862
+te2: 0.6125
+
+epoc: 22
+training: 0.7352
+te0: 0.7900
+te1: 0.6921
+te2: 0.6128
+
+epoc: 23
+training: 0.7358
+te0: 0.7700
+te1: 0.6923
+te2: 0.6173
+
+epoc: 24
+training: 0.6930
+te0: 0.7600
+te1: 0.6972
+te2: 0.6164
+
+epoc: 25
+training: 0.7869
+te0: 0.7700
+te1: 0.7030
+te2: 0.6198
+
+epoc: 26
+training: 0.7446
+te0: 0.7900
+te1: 0.7128
+te2: 0.6220
+
+epoc: 27
+training: 0.7500
+te0: 0.7900
+te1: 0.7216
+te2: 0.6255
+
+epoc: 28
+training: 0.7543
+te0: 0.7900
+te1: 0.7294
+te2: 0.6274
+
+epoc: 29
+training: 0.7586
+te0: 0.7900
+te1: 0.7343
+te2: 0.6325
+
+epoc: 30
+training: 0.7066
+te0: 0.7900
+te1: 0.7387
+te2: 0.6322
+
+epoc: 31
+training: 0.8087
+te0: 0.8100
+te1: 0.7411
+te2: 0.6342
+
+epoc: 32
+training: 0.7615
+te0: 0.7900
+te1: 0.7489
+te2: 0.6334
+
+epoc: 33
+training: 0.8078
+te0: 0.7900
+te1: 0.7518
+te2: 0.6363
+
+epoc: 34
+training: 0.7241
+te0: 0.8000
+te1: 0.7547
+te2: 0.6415
+
+epoc: 35
+training: 0.7697
+te0: 0.8200
+te1: 0.7555
+te2: 0.6468
+
+epoc: 36
+training: 0.7759
+te0: 0.8300
+te1: 0.7570
+te2: 0.6558
+
+epoc: 37
+training: 0.8247
+te0: 0.8300
+te1: 0.7597
+te2: 0.6609
+
+epoc: 38
+training: 0.7473
+te0: 0.8300
+te1: 0.7517
+te2: 0.6621
+
+epoc: 39
+training: 0.7926
+te0: 0.8600
+te1: 0.7551
+te2: 0.6680
+
+epoc: 40
+training: 0.8469
+te0: 0.8300
+te1: 0.7617
+te2: 0.6710
+
+epoc: 41
+training: 0.8487
+te0: 0.8300
+te1: 0.7607
+te2: 0.6768
+
+epoc: 42
+training: 0.7633
+te0: 0.8600
+te1: 0.7625
+te2: 0.6766
+
+epoc: 43
+training: 0.8082
+te0: 0.8200
+te1: 0.7628
+te2: 0.6752
+
+epoc: 44
+training: 0.8696
+te0: 0.8200
+te1: 0.7662
+te2: 0.6817
+
+epoc: 45
+training: 0.8233
+te0: 0.8200
+te1: 0.7698
+te2: 0.6842
+
+epoc: 46
+training: 0.8265
+te0: 0.8200
+te1: 0.7744
+te2: 0.6895
+
+epoc: 47
+training: 0.8279
+te0: 0.8100
+te1: 0.7734
+te2: 0.7056
+
+epoc: 48
+training: 0.8890
+te0: 0.8100
+te1: 0.7694
+te2: 0.7079
+
+epoc: 49
+training: 0.8973
+te0: 0.8200
+te1: 0.7682
+te2: 0.7125
+
+epoc: 50
+training: 0.9007
+te0: 0.8100
+te1: 0.7737
+te2: 0.7271
+
+epoc: 51
+training: 0.9083
+te0: 0.8100
+te1: 0.7755
+te2: 0.7332
+
+epoc: 52
+training: 0.9194
+te0: 0.8100
+te1: 0.7733
+te2: 0.7351
+
+epoc: 53
+training: 0.9191
+te0: 0.8200
+te1: 0.7806
+te2: 0.7327
+
+epoc: 54
+training: 0.8342
+te0: 0.8300
+te1: 0.8042
+te2: 0.7470
+
+epoc: 55
+training: 0.9298
+te0: 0.8400
+te1: 0.8042
+te2: 0.7470
+
+epoc: 56
+training: 0.9348
+te0: 0.8400
+te1: 0.8072
+te2: 0.7570
+
+epoc: 57
+training: 0.9377
+te0: 0.8400
+te1: 0.8079
+te2: 0.7558
+
+epoc: 58
+training: 0.9437
+te0: 0.8400
+te1: 0.8123
+te2: 0.7619
+
+epoc: 59
+training: 0.9446
+te0: 0.8400
+te1: 0.8118
+te2: 0.7616
+
+epoc: 60
+training: 0.9512
+te0: 0.8500
+te1: 0.8150
+te2: 0.7626
+
+epoc: 61
+training: 0.9077
+te0: 0.8500
+te1: 0.8213
+te2: 0.7726
+
+epoc: 62
+training: 0.9061
+te0: 0.8400
+te1: 0.8232
+te2: 0.7646
+
+epoc: 63
+training: 0.9586
+te0: 0.8300
+te1: 0.8284
+te2: 0.7765
+
+epoc: 64
+training: 0.9592
+te0: 0.8400
+te1: 0.8262
+te2: 0.7736
+
+epoc: 65
+training: 0.9600
+te0: 0.8400
+te1: 0.8284
+te2: 0.7785
+
+epoc: 66
+training: 0.9118
+te0: 0.8500
+te1: 0.8223
+te2: 0.7763
+
+epoc: 67
+training: 0.9688
+te0: 0.8500
+te1: 0.8232
+te2: 0.7804
+
+epoc: 68
+training: 0.9655
+te0: 0.8600
+te1: 0.8242
+te2: 0.7822
+
+epoc: 69
+training: 0.9675
+te0: 0.8700
+te1: 0.8262
+te2: 0.7834
+
+epoc: 70
+training: 0.9714
+te0: 0.8600
+te1: 0.8313
+te2: 0.7887
+
+epoc: 71
+training: 0.9690
+te0: 0.8600
+te1: 0.8335
+te2: 0.7916
+
+epoc: 72
+training: 0.9687
+te0: 0.8700
+te1: 0.8262
+te2: 0.7851
+
+epoc: 73
+training: 0.9683
+te0: 0.8700
+te1: 0.8242
+te2: 0.7809
+
+epoc: 74
+training: 0.9761
+te0: 0.8700
+te1: 0.8291
+te2: 0.7919
+
+epoc: 75
+training: 0.9745
+te0: 0.8500
+te1: 0.8335
+te2: 0.7970
+
+epoc: 76
+training: 0.9742
+te0: 0.8700
+te1: 0.8271
+te2: 0.7897
+
+epoc: 77
+training: 0.9776
+te0: 0.8700
+te1: 0.8281
+te2: 0.7851
+
+epoc: 78
+training: 0.9756
+te0: 0.8700
+te1: 0.8293
+te2: 0.7870
+
+epoc: 79
+training: 0.9738
+te0: 0.8600
+te1: 0.8376
+te2: 0.7985
+
+epoc: 80
+training: 0.9786
+te0: 0.8600
+te1: 0.8386
+te2: 0.8014
+
+epoc: 81
+training: 0.9770
+te0: 0.8600
+te1: 0.8386
+te2: 0.8004
+
+epoc: 82
+training: 0.9804
+te0: 0.8600
+te1: 0.8364
+te2: 0.7965
+
+epoc: 83
+training: 0.9780
+te0: 0.8600
+te1: 0.8364
+te2: 0.7953
+
+epoc: 84
+training: 0.9763
+te0: 0.8600
+te1: 0.8405
+te2: 0.8004
+
+epoc: 85
+training: 0.9805
+te0: 0.8600
+te1: 0.8332
+te2: 0.7953
+
+epoc: 86
+training: 0.9804
+te0: 0.8600
+te1: 0.8437
+te2: 0.8121
+
+epoc: 87
+training: 0.9812
+te0: 0.8600
+te1: 0.8393
+te2: 0.8075
+
+epoc: 88
+training: 0.9779
+te0: 0.8600
+te1: 0.8374
+te2: 0.8031
+
+epoc: 89
+training: 0.9827
+te0: 0.8600
+te1: 0.8403
+te2: 0.8072
+
+epoc: 90
+training: 0.9843
+te0: 0.8600
+te1: 0.8425
+te2: 0.8187
+
+epoc: 91
+training: 0.9807
+te0: 0.8600
+te1: 0.8415
+te2: 0.8177
+
+epoc: 92
+training: 0.9812
+te0: 0.8600
+te1: 0.8425
+te2: 0.8094
+
+epoc: 93
+training: 0.9836
+te0: 0.8600
+te1: 0.8383
+te2: 0.8053
+
+epoc: 94
+training: 0.9814
+te0: 0.8600
+te1: 0.8403
+te2: 0.8102
+
+epoc: 95
+training: 0.9850
+te0: 0.8600
+te1: 0.8415
+te2: 0.8143
+
+epoc: 96
+training: 0.9807
+te0: 0.8600
+te1: 0.8362
+te2: 0.8070
+
+epoc: 97
+training: 0.9829
+te0: 0.8600
+te1: 0.8332
+te2: 0.7990
+
+epoc: 98
+training: 0.9819
+te0: 0.8600
+te1: 0.8352
+te2: 0.8072
+
+epoc: 99
+training: 0.9822
+te0: 0.8600
+te1: 0.8464
+te2: 0.8194
+
+('SL2', '1k', 30)
+epoc: 00
+training: 0.5371
+te0: 0.5500
+te1: 0.5984
+te2: 0.5900
+
+epoc: 01
+training: 0.5800
+te0: 0.6400
+te1: 0.6285
+te2: 0.6117
+
+epoc: 02
+training: 0.5541
+te0: 0.6700
+te1: 0.6511
+te2: 0.6229
+
+epoc: 03
+training: 0.7016
+te0: 0.6600
+te1: 0.6582
+te2: 0.6280
+
+epoc: 04
+training: 0.6755
+te0: 0.6800
+te1: 0.6701
+te2: 0.6251
+
+epoc: 05
+training: 0.7409
+te0: 0.7000
+te1: 0.6862
+te2: 0.6222
+
+epoc: 06
+training: 0.7540
+te0: 0.7200
+te1: 0.6916
+te2: 0.6340
+
+epoc: 07
+training: 0.7593
+te0: 0.7300
+te1: 0.7104
+te2: 0.6387
+
+epoc: 08
+training: 0.6771
+te0: 0.7400
+te1: 0.7179
+te2: 0.6336
+
+epoc: 09
+training: 0.7770
+te0: 0.7300
+te1: 0.7212
+te2: 0.6303
+
+epoc: 10
+training: 0.6939
+te0: 0.7500
+te1: 0.7283
+te2: 0.6283
+
+epoc: 11
+training: 0.7473
+te0: 0.7500
+te1: 0.7200
+te2: 0.6343
+
+epoc: 12
+training: 0.7527
+te0: 0.7700
+te1: 0.7448
+te2: 0.6409
+
+epoc: 13
+training: 0.7660
+te0: 0.8200
+te1: 0.7870
+te2: 0.6470
+
+epoc: 14
+training: 0.7823
+te0: 0.8600
+te1: 0.7932
+te2: 0.6762
+
+epoc: 15
+training: 0.8073
+te0: 0.9000
+te1: 0.8127
+te2: 0.7047
+
+epoc: 16
+training: 0.8735
+te0: 0.8400
+te1: 0.8255
+te2: 0.7329
+
+epoc: 17
+training: 0.8358
+te0: 0.8300
+te1: 0.7820
+te2: 0.7322
+
+epoc: 18
+training: 0.9072
+te0: 0.8300
+te1: 0.7954
+te2: 0.7493
+
+epoc: 19
+training: 0.9305
+te0: 0.8400
+te1: 0.8135
+te2: 0.7695
+
+epoc: 20
+training: 0.8916
+te0: 0.8800
+te1: 0.8293
+te2: 0.7883
+
+epoc: 21
+training: 0.9497
+te0: 0.8700
+te1: 0.8230
+te2: 0.7846
+
+epoc: 22
+training: 0.9524
+te0: 0.8700
+te1: 0.8262
+te2: 0.7885
+
+epoc: 23
+training: 0.9632
+te0: 0.8900
+te1: 0.8447
+te2: 0.8102
+
+epoc: 24
+training: 0.9654
+te0: 0.9000
+te1: 0.8519
+te2: 0.8167
+
+epoc: 25
+training: 0.9741
+te0: 0.9000
+te1: 0.8459
+te2: 0.8153
+
+epoc: 26
+training: 0.9790
+te0: 0.9000
+te1: 0.8531
+te2: 0.8294
+
+epoc: 27
+training: 0.9806
+te0: 0.9100
+te1: 0.8592
+te2: 0.8392
+
+epoc: 28
+training: 0.9810
+te0: 0.9100
+te1: 0.8510
+te2: 0.8372
+
+epoc: 29
+training: 0.9868
+te0: 0.9100
+te1: 0.8529
+te2: 0.8311
+
+epoc: 30
+training: 0.9865
+te0: 0.9100
+te1: 0.8570
+te2: 0.8506
+
+epoc: 31
+training: 0.9897
+te0: 0.9200
+te1: 0.8570
+te2: 0.8535
+
+epoc: 32
+training: 0.9897
+te0: 0.9100
+te1: 0.8561
+te2: 0.8443
+
+epoc: 33
+training: 0.9913
+te0: 0.9100
+te1: 0.8580
+te2: 0.8552
+
+epoc: 34
+training: 0.9903
+te0: 0.9200
+te1: 0.8612
+te2: 0.8574
+
+epoc: 35
+training: 0.9927
+te0: 0.9200
+te1: 0.8580
+te2: 0.8562
+
+epoc: 36
+training: 0.9922
+te0: 0.9200
+te1: 0.8580
+te2: 0.8540
+
+epoc: 37
+training: 0.9920
+te0: 0.9200
+te1: 0.8600
+te2: 0.8594
+
+epoc: 38
+training: 0.9927
+te0: 0.9200
+te1: 0.8610
+te2: 0.8594
+
+epoc: 39
+training: 0.9945
+te0: 0.9200
+te1: 0.8610
+te2: 0.8591
+
+epoc: 40
+training: 0.9945
+te0: 0.9200
+te1: 0.8619
+te2: 0.8591
+
+epoc: 41
+training: 0.9936
+te0: 0.9200
+te1: 0.8610
+te2: 0.8611
+
+epoc: 42
+training: 0.9947
+te0: 0.9200
+te1: 0.8610
+te2: 0.8621
+
+epoc: 43
+training: 0.9949
+te0: 0.9200
+te1: 0.8610
+te2: 0.8628
+
+epoc: 44
+training: 0.9957
+te0: 0.9200
+te1: 0.8610
+te2: 0.8619
+
+epoc: 45
+training: 0.9964
+te0: 0.9200
+te1: 0.8619
+te2: 0.8589
+
+epoc: 46
+training: 0.9961
+te0: 0.9200
+te1: 0.8610
+te2: 0.8589
+
+epoc: 47
+training: 0.9970
+te0: 0.9200
+te1: 0.8629
+te2: 0.8575
+
+epoc: 48
+training: 0.9975
+te0: 0.9200
+te1: 0.8629
+te2: 0.8619
+
+epoc: 49
+training: 0.9968
+te0: 0.9200
+te1: 0.8629
+te2: 0.8609
+
+epoc: 50
+training: 0.9980
+te0: 0.9200
+te1: 0.8629
+te2: 0.8599
+
+epoc: 51
+training: 0.9982
+te0: 0.9200
+te1: 0.8668
+te2: 0.8621
+
+epoc: 52
+training: 0.9977
+te0: 0.9200
+te1: 0.8680
+te2: 0.8699
+
+epoc: 53
+training: 0.9982
+te0: 0.9200
+te1: 0.8680
+te2: 0.8679
+
+epoc: 54
+training: 0.9991
+te0: 0.9200
+te1: 0.8658
+te2: 0.8648
+
+epoc: 55
+training: 0.9982
+te0: 0.9200
+te1: 0.8658
+te2: 0.8648
+
+epoc: 56
+training: 0.9982
+te0: 0.9200
+te1: 0.8649
+te2: 0.8636
+
+epoc: 57
+training: 0.9991
+te0: 0.9200
+te1: 0.8639
+te2: 0.8622
+
+epoc: 58
+training: 0.9991
+te0: 0.9200
+te1: 0.8639
+te2: 0.8622
+
+epoc: 59
+training: 0.9991
+te0: 0.9200
+te1: 0.8678
+te2: 0.8643
+
+epoc: 60
+training: 0.9991
+te0: 0.9200
+te1: 0.8719
+te2: 0.8677
+
+epoc: 61
+training: 0.9991
+te0: 0.9200
+te1: 0.8658
+te2: 0.8643
+
+epoc: 62
+training: 0.9980
+te0: 0.9200
+te1: 0.8678
+te2: 0.8653
+
+epoc: 63
+training: 0.9991
+te0: 0.9100
+te1: 0.8751
+te2: 0.8726
+
+epoc: 64
+training: 0.9991
+te0: 0.9100
+te1: 0.8729
+te2: 0.8675
+
+epoc: 65
+training: 1.0000
+te0: 0.9100
+te1: 0.8729
+te2: 0.8670
+
+epoc: 66
+training: 1.0000
+te0: 0.9100
+te1: 0.8729
+te2: 0.8673
+
+epoc: 67
+training: 1.0000
+te0: 0.9100
+te1: 0.8729
+te2: 0.8692
+
+epoc: 68
+training: 1.0000
+te0: 0.9100
+te1: 0.8751
+te2: 0.8736
+
+epoc: 69
+training: 1.0000
+te0: 0.9100
+te1: 0.8751
+te2: 0.8765
+
+epoc: 70
+training: 1.0000
+te0: 0.9100
+te1: 0.8751
+te2: 0.8775
+
+epoc: 71
+training: 1.0000
+te0: 0.9100
+te1: 0.8751
+te2: 0.8775
+
+epoc: 72
+training: 1.0000
+te0: 0.9100
+te1: 0.8761
+te2: 0.8743
+
+epoc: 73
+training: 1.0000
+te0: 0.9100
+te1: 0.8761
+te2: 0.8753
+
+epoc: 74
+training: 1.0000
+te0: 0.9100
+te1: 0.8761
+te2: 0.8753
+
+epoc: 75
+training: 1.0000
+te0: 0.9100
+te1: 0.8761
+te2: 0.8753
+
+epoc: 76
+training: 1.0000
+te0: 0.9100
+te1: 0.8751
+te2: 0.8753
+
+epoc: 77
+training: 1.0000
+te0: 0.9100
+te1: 0.8751
+te2: 0.8763
+
+epoc: 78
+training: 1.0000
+te0: 0.9100
+te1: 0.8770
+te2: 0.8775
+
+epoc: 79
+training: 1.0000
+te0: 0.9100
+te1: 0.8761
+te2: 0.8763
+
+epoc: 80
+training: 1.0000
+te0: 0.9100
+te1: 0.8751
+te2: 0.8763
+
+epoc: 81
+training: 1.0000
+te0: 0.9100
+te1: 0.8751
+te2: 0.8765
+
+epoc: 82
+training: 1.0000
+te0: 0.9100
+te1: 0.8761
+te2: 0.8785
+
+epoc: 83
+training: 1.0000
+te0: 0.9100
+te1: 0.8761
+te2: 0.8785
+
+epoc: 84
+training: 1.0000
+te0: 0.9100
+te1: 0.8773
+te2: 0.8785
+
+epoc: 85
+training: 1.0000
+te0: 0.9100
+te1: 0.8782
+te2: 0.8785
+
+epoc: 86
+training: 1.0000
+te0: 0.9100
+te1: 0.8763
+te2: 0.8785
+
+epoc: 87
+training: 1.0000
+te0: 0.9200
+te1: 0.8753
+te2: 0.8785
+
+epoc: 88
+training: 1.0000
+te0: 0.9200
+te1: 0.8753
+te2: 0.8785
+
+epoc: 89
+training: 1.0000
+te0: 0.9200
+te1: 0.8743
+te2: 0.8775
+
+epoc: 90
+training: 1.0000
+te0: 0.9200
+te1: 0.8753
+te2: 0.8775
+
+epoc: 91
+training: 1.0000
+te0: 0.9200
+te1: 0.8753
+te2: 0.8794
+
+epoc: 92
+training: 1.0000
+te0: 0.9200
+te1: 0.8753
+te2: 0.8785
+
+epoc: 93
+training: 1.0000
+te0: 0.9200
+te1: 0.8773
+te2: 0.8775
+
+epoc: 94
+training: 1.0000
+te0: 0.9200
+te1: 0.8773
+te2: 0.8775
+
+epoc: 95
+training: 1.0000
+te0: 0.9200
+te1: 0.8773
+te2: 0.8785
+
+epoc: 96
+training: 1.0000
+te0: 0.9200
+te1: 0.8782
+te2: 0.8794
+
+epoc: 97
+training: 1.0000
+te0: 0.9200
+te1: 0.8773
+te2: 0.8785
+
+epoc: 98
+training: 1.0000
+te0: 0.9200
+te1: 0.8763
+te2: 0.8775
+
+epoc: 99
+training: 1.0000
+te0: 0.9200
+te1: 0.8773
+te2: 0.8775
+
+('SL2', '1k', 100)
+epoc: 00
+training: 0.6237
+te0: 0.6900
+te1: 0.6612
+te2: 0.6457
+
+epoc: 01
+training: 0.6238
+te0: 0.7700
+te1: 0.7280
+te2: 0.6588
+
+epoc: 02
+training: 0.7092
+te0: 0.8000
+te1: 0.7695
+te2: 0.6635
+
+epoc: 03
+training: 0.8262
+te0: 0.8300
+te1: 0.7842
+te2: 0.6641
+
+epoc: 04
+training: 0.8517
+te0: 0.8700
+te1: 0.8051
+te2: 0.6774
+
+epoc: 05
+training: 0.8878
+te0: 0.8700
+te1: 0.8328
+te2: 0.7688
+
+epoc: 06
+training: 0.9551
+te0: 0.7800
+te1: 0.7767
+te2: 0.7733
+
+epoc: 07
+training: 0.9623
+te0: 0.8500
+te1: 0.8187
+te2: 0.7924
+
+epoc: 08
+training: 0.9756
+te0: 0.8800
+te1: 0.8378
+te2: 0.8068
+
+epoc: 09
+training: 0.9784
+te0: 0.9100
+te1: 0.8531
+te2: 0.8267
+
+epoc: 10
+training: 0.9863
+te0: 0.9100
+te1: 0.8655
+te2: 0.8547
+
+epoc: 11
+training: 0.9950
+te0: 0.8700
+te1: 0.8310
+te2: 0.8008
+
+epoc: 12
+training: 0.9965
+te0: 0.9200
+te1: 0.8692
+te2: 0.8724
+
+epoc: 13
+training: 0.9963
+te0: 0.9200
+te1: 0.8646
+te2: 0.8604
+
+epoc: 14
+training: 0.9977
+te0: 0.9200
+te1: 0.8537
+te2: 0.8414
+
+epoc: 15
+training: 0.9977
+te0: 0.9200
+te1: 0.8634
+te2: 0.8628
+
+epoc: 16
+training: 0.9989
+te0: 0.9300
+te1: 0.8741
+te2: 0.8718
+
+epoc: 17
+training: 0.9998
+te0: 0.9300
+te1: 0.8741
+te2: 0.8836
+
+epoc: 18
+training: 0.9997
+te0: 0.9300
+te1: 0.8790
+te2: 0.8851
+
+epoc: 19
+training: 1.0000
+te0: 0.9300
+te1: 0.8800
+te2: 0.8883
+
+epoc: 20
+training: 1.0000
+te0: 0.9300
+te1: 0.8821
+te2: 0.8873
+
+epoc: 21
+training: 1.0000
+te0: 0.9300
+te1: 0.8709
+te2: 0.8859
+
+epoc: 22
+training: 1.0000
+te0: 0.9400
+te1: 0.8770
+te2: 0.8886
+
+epoc: 23
+training: 1.0000
+te0: 0.9500
+te1: 0.8945
+te2: 0.8932
+
+epoc: 24
+training: 0.9989
+te0: 0.9600
+te1: 0.9428
+te2: 0.8942
+
+epoc: 25
+training: 0.9989
+te0: 0.9500
+te1: 0.9113
+te2: 0.8909
+
+epoc: 26
+training: 0.9982
+te0: 0.9400
+te1: 0.8933
+te2: 0.8890
+
+epoc: 27
+training: 1.0000
+te0: 0.9600
+te1: 0.9389
+te2: 0.8996
+
+epoc: 28
+training: 0.9964
+te0: 0.9400
+te1: 0.8848
+te2: 0.8715
+
+epoc: 29
+training: 1.0000
+te0: 0.9300
+te1: 0.8889
+te2: 0.8794
+
+epoc: 30
+training: 1.0000
+te0: 0.9600
+te1: 0.9244
+te2: 0.8917
+
+epoc: 31
+training: 1.0000
+te0: 0.9700
+te1: 0.9339
+te2: 0.8970
+
+epoc: 32
+training: 1.0000
+te0: 0.9700
+te1: 0.9339
+te2: 0.8990
+
+epoc: 33
+training: 1.0000
+te0: 0.9600
+te1: 0.9276
+te2: 0.8999
+
+epoc: 34
+training: 1.0000
+te0: 0.9600
+te1: 0.9254
+te2: 0.8990
+
+epoc: 35
+training: 1.0000
+te0: 0.9600
+te1: 0.9295
+te2: 0.8999
+
+epoc: 36
+training: 1.0000
+te0: 0.9600
+te1: 0.9295
+te2: 0.8999
+
+epoc: 37
+training: 1.0000
+te0: 0.9700
+te1: 0.9325
+te2: 0.9011
+
+epoc: 38
+training: 1.0000
+te0: 0.9700
+te1: 0.9334
+te2: 0.9011
+
+epoc: 39
+training: 1.0000
+te0: 0.9700
+te1: 0.9366
+te2: 0.9011
+
+epoc: 40
+training: 1.0000
+te0: 0.9700
+te1: 0.9388
+te2: 0.9011
+
+epoc: 41
+training: 1.0000
+te0: 0.9700
+te1: 0.9388
+te2: 0.9021
+
+epoc: 42
+training: 1.0000
+te0: 0.9700
+te1: 0.9398
+te2: 0.9043
+
+epoc: 43
+training: 1.0000
+te0: 0.9700
+te1: 0.9407
+te2: 0.9082
+
+epoc: 44
+training: 1.0000
+te0: 0.9700
+te1: 0.9429
+te2: 0.9111
+
+epoc: 45
+training: 1.0000
+te0: 0.9700
+te1: 0.9429
+te2: 0.9111
+
+epoc: 46
+training: 1.0000
+te0: 0.9700
+te1: 0.9407
+te2: 0.9092
+
+epoc: 47
+training: 1.0000
+te0: 0.9700
+te1: 0.9407
+te2: 0.9092
+
+epoc: 48
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9143
+
+epoc: 49
+training: 1.0000
+te0: 0.9700
+te1: 0.9443
+te2: 0.9133
+
+epoc: 50
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9143
+
+epoc: 51
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9143
+
+epoc: 52
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9133
+
+epoc: 53
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9133
+
+epoc: 54
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9133
+
+epoc: 55
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9133
+
+epoc: 56
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9133
+
+epoc: 57
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9143
+
+epoc: 58
+training: 1.0000
+te0: 0.9700
+te1: 0.9441
+te2: 0.9111
+
+epoc: 59
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9141
+
+epoc: 60
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9153
+
+epoc: 61
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9153
+
+epoc: 62
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9141
+
+epoc: 63
+training: 1.0000
+te0: 0.9700
+te1: 0.9441
+te2: 0.9131
+
+epoc: 64
+training: 1.0000
+te0: 0.9700
+te1: 0.9441
+te2: 0.9121
+
+epoc: 65
+training: 1.0000
+te0: 0.9700
+te1: 0.9441
+te2: 0.9131
+
+epoc: 66
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9162
+
+epoc: 67
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9153
+
+epoc: 68
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9153
+
+epoc: 69
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9153
+
+epoc: 70
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9133
+
+epoc: 71
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9133
+
+epoc: 72
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9143
+
+epoc: 73
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9141
+
+epoc: 74
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9121
+
+epoc: 75
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9141
+
+epoc: 76
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9162
+
+epoc: 77
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9162
+
+epoc: 78
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9123
+
+epoc: 79
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9133
+
+epoc: 80
+training: 1.0000
+te0: 0.9700
+te1: 0.9455
+te2: 0.9133
+
+epoc: 81
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9133
+
+epoc: 82
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9133
+
+epoc: 83
+training: 1.0000
+te0: 0.9700
+te1: 0.9453
+te2: 0.9133
+
+epoc: 84
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9133
+
+epoc: 85
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9123
+
+epoc: 86
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9133
+
+epoc: 87
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9133
+
+epoc: 88
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9133
+
+epoc: 89
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9133
+
+epoc: 90
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9133
+
+epoc: 91
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9133
+
+epoc: 92
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9133
+
+epoc: 93
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9143
+
+epoc: 94
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9143
+
+epoc: 95
+training: 1.0000
+te0: 0.9700
+te1: 0.9463
+te2: 0.9143
+
+epoc: 96
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9143
+
+epoc: 97
+training: 1.0000
+te0: 0.9700
+te1: 0.9482
+te2: 0.9153
+
+epoc: 98
+training: 1.0000
+te0: 0.9700
+te1: 0.9473
+te2: 0.9143
+
+epoc: 99
+training: 1.0000
+te0: 0.9700
+te1: 0.9482
+te2: 0.9143
+

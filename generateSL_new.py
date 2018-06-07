@@ -205,7 +205,7 @@ def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden,
                                 if word not in trainingSL:
                                     print(x, len(x),word, posORneg, "generateSLTest1",checkForbidden)
                                     samplePerLength.append(word)
-                                    samples+=samplePerLength
+                        samples+=samplePerLength
                         break
         for t in range(m,26):
             samplePerLength=[]
@@ -272,7 +272,9 @@ def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden,
                         if y not in o:
                             o.append(y)
                 j=len(alphabet)*2
-                j=j+2
+                if x == 1:
+                    j=j-1
+                #j=j+2
                 if len(o) != j:
                     """
                     if p[0] not in o:
@@ -293,6 +295,7 @@ def generateSLTest1(alphabet,trainingSL, sampleAmount, posORneg, checkForbidden,
                         b.append(p[1])
                     if p[2] not in b:
                         b.append(p[2])
+                    print('o == ' , o)
                     unique = [c for c in b if c not in o]
                     while len(samplePerLength) < sampleAmount:
                         z = random.choice(unique)
@@ -410,12 +413,22 @@ if __name__ == "__main__":
 
 aSize=int(aSize)
 alphabet=string.ascii_letters+string.digits
+alphabet=alphabet.replace('0','')
 r=aSize-len(alphabet)
 point = 161
 for x in range(r):
     alphabet+=chr(point)
     point+=1
+tempAlpha=''
+if aSize<=len(alphabet):
+    for a in alphabet:
+        if len(tempAlpha)<aSize:
+            tempAlpha+=a
+        else:
+            break
+    alphabet = tempAlpha
 
+    
 sampleSizes = [20,200,2000]
 
 for x in sampleSizes:

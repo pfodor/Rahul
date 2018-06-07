@@ -20,34 +20,58 @@ import random
 import sys
 import string
 
+lenAlphabet = 0
+
+def  partitions(x):
+    temp=-1
+    ret = []
+    for i in range(len(x)):
+        if temp == -1:
+            temp = x[i]
+        elif temp != x[i]:
+            ret.append(int(i))
+            temp=x[i]
+    ret.append(len(x))
+    return ret
+            
 
 def stringTranslation(s):
-
+    global lenAlphabet
+    
     d={}
     #x = string.ascii_lowercase+string.ascii_uppercase+'123456789'
     x=string.ascii_letters+string.digits
+    x=x.replace('0','')
     r=150-len(x)
     point = 161
     for j in range(r):
         x+=chr(point)
         point+=1
 
-    i = 1
-    
+    #i = 1
+    i=0 #chenged because for the one hot we can have all zeros for the zero vector
     for q in x:
         d[q]=i
         i+=1
-
+        
     ret=[]
     for l in s:
-        ret.append([d[l]])
+        #create a one hot vector
+        oneHot = [0 for i in range(lenAlphabet)]
+        oneHot[d[l]] = 1
+        #ret.append([d[l]])
+        ret.append(oneHot)
     return ret
 
 def padData(a, max_len=50):
 
+    global lenAlphabet
+    
     ret = a
     slen = len(a)
-    ret +=[[0] for i in range(max_len-slen)]
+    #ret +=[[0] for i in range(max_len-slen)]
+    z=[0 for i in range(lenAlphabet)]
+    ret +=[z for i in range(max_len-slen)]
     return ret
 
 
@@ -108,6 +132,9 @@ class RenderSequenceData(object):
                     a = stringPosDict[key].pop(0)
                     t = stringTranslation(a)
                     t = padData(t)
+                    #print(a)
+                    #print(t)
+                    #sys.exit()
                     self.train_data.append(t)
                     self.train_labels.append([1,0])
                     self.train_seqlen.append(len(a))
@@ -231,6 +258,7 @@ sl= sys.argv[1]  #'SL2'
 k_chunk = sys.argv[2] #'1k'
 traindir = sys.argv[4]+'/'+k_chunk+'/' #'../sl_train56/1k/'
 testdir = sys.argv[5]+'/'+k_chunk+'/'  #'../sl_test56/1k/'
+lenAlphabet = int(sys.argv[6])
 
 dataset = RenderSequenceData(sl,traindir, testdir)
 
@@ -243,7 +271,9 @@ dataset = RenderSequenceData(sl,traindir, testdir)
 #testset = ToySequenceData(n_samples=500, max_seq_len=seq_max_len)
 
 # tf Graph input
-x = tf.placeholder("float", [None, seq_max_len, 1])
+
+#x = tf.placeholder("float", [None, seq_max_len, 1])
+x = tf.placeholder("float", [None, seq_max_len, lenAlphabet]) #changed for the addition of one-hot
 y = tf.placeholder("float", [None, n_classes])
 # A placeholder for indicating each sequence length
 seqlen = tf.placeholder(tf.int32, [None])
@@ -334,15 +364,31 @@ with tf.Session() as sess:
     test1_data = dataset.test1_data
     test1_label = dataset.test1_labels
     test1_seqlen = dataset.test1_seqlen
+    
+    test1partitions = partitions(test1_seqlen)
 
     test2_data = dataset.test2_data
     test2_label = dataset.test2_labels
     test2_seqlen = dataset.test2_seqlen
 
-
-    print("*",sl, str(k_chunk)+'k')
+    test2partitions = partitions(test2_seqlen)
+    
+    print("*",sl, str(k_chunk))
     print("* Test1 Accuracy:", \
-        sess.run(accuracy, feed_dict={x: test1_data, y: test1_label, seqlen: test1_seqlen}))
+        sess.run(accuracy, feed_dict={x: test1_data, y: test1_label, seqlen: test1_seqlen}))  
+    prev = 0
+    for i in test1partitions:
+        print("* Test1 accuracy for string of length "+str(test1_seqlen[prev])+" :", \
+              sess.run(accuracy, feed_dict={x: test1_data[prev:i], y: test1_label[prev:i], seqlen: test1_seqlen[prev:i]}), 'count :', len(test1_label[prev:i]))
+        prev=i
+        
 
     print("* Test2 Accuracy:", \
         sess.run(accuracy, feed_dict={x: test2_data, y: test2_label, seqlen: test2_seqlen}))
+
+    prev = 0
+    for i in test2partitions:
+        print("* Test2 accuracy for string of length "+str(test2_seqlen[prev])+" :", \
+              sess.run(accuracy, feed_dict={x: test2_data[prev:i], y: test2_label[prev:i], seqlen: test2_seqlen[prev:i]}), 'count :', len(test1_label[prev:i]))
+        prev=i
+
