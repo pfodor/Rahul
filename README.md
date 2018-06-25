@@ -1,16 +1,13 @@
-Use the generateSL.py and generateSP.py files to create data sets for alphabets of size strictly smaller than 10.
+Use the generateSL.py and generateSP_new.py files to create data sets for alphabets of size strictly smaller than 10.
 Use the generateSL_new.py and generateSP_new.py files to create data sets for alphabets of size bigger than or equal to 10.
 
 
 
-Usage for generateSL.py generateSP.py
+Usage for generateSL.py
 
-      python3 generateSL[SP].py  alphabet sl[sp]_training_directory sl[sp]_testing_directory
+      python3 generateSL.py  alphabet sl_training_directory sl_testing_directory
 
       examples: python3 generateSL.py abcd sl_train4 sl_test4
-      	        python3 generateSP.py abcdef sp_train6 sp_test6
-
-
 
 
 Usage for generateSL_new.py generateSP_new.py

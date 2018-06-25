@@ -437,14 +437,7 @@ if __name__ == "__main__":
 sampleSizes = [200,2000]
 
 for x in sampleSizes:
-
-    sp2NegSamples={}
-    sp2PosSamples={}
-    sp4NegSamples={}
-    sp4PosSamples={}
-    sp8NegSamples={}
-    fillNegSamples(alphabet)
-
+    
     i = x * 25 * 2
     i = int(i / 1000)
     trainDir = trainDirOrig
