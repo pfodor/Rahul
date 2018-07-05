@@ -19,7 +19,7 @@ Usage for generateSL_new.py generateSP_new.py
 
 
 
-Once these data files have been created we combine the seperated directories have been created we combine them using the dataTransferScript and the dataCombineScript
+Once these seperate data files and directories have been created we combine them using the dataTransferScript and the dataCombineScript
 
 First run dataTransferScript.py as follow:
 
